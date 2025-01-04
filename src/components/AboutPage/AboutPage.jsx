@@ -68,12 +68,12 @@ const AboutPage = () => {
         ))}
        </div>
       </div>
-      <div className="mt-12">
-        <h3 className="text-3xl  text-black font-bold text-center mb-6">
+      <div className="mt-12 bg-white px-6 py-12 rounded-xl">
+        <h3 className="text-3xl text-black font-bold text-center mb-6">
           My Skill
         </h3>
-        <div className="max-w-2xl mx-auto text-center bg-[#f45252] px-6 py-12 rounded-xl">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             <div>
               <div
                 className="radial-progress bg-primary text-primary-content border-primary border-4"

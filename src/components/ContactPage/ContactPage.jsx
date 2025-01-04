@@ -33,30 +33,30 @@ function ContactPage() {
   };
 
   return (
-    <div className="my-12" id="contact">
+    <div className="my-12 bg-amber-300 px-6 py-12 rounded-xl" id="contact">
       <h3 className="text-3xl  text-black font-bold text-center">
         GET IN TOUCH
       </h3>
       <div className="md:flex justify-between space-y-5 md:space-y-0 md:gap-5 lg:gap-12">
         <div className="flex-1">
-          <h3>Dont't hesitate to contact me</h3>
-          <p>
+          <h3 className="text-4xl font-bold mb-2">Dont't hesitate to contact me</h3>
+          <p className="font-semibold text-lg mb-2">
             Feel free to get in touch with me. I am always open to discussing
             new projects, creative ideas or opportunities to be part of your
             visions.
           </p>
           <div className="flex gap-3 items-center">
-            <div><IoMdMailOpen /></div>
+            <div><IoMdMailOpen className="size-12"/></div>
             <div>
-              <h4>Mail me</h4>
-              <p>shahidulislamshohi7@gmail.com</p>
+              <h4 className="text-xl font-semibold">Mail me</h4>
+              <p className="text-lg font-semibold">shahidulislamshohi7@gmail.com</p>
             </div>
           </div>
-          <div className="flex gap-3 items-center">
-            <div><PiPhoneCallFill /></div>
+          <div className="flex gap-3 items-center mt-3">
+            <div><PiPhoneCallFill className="size-12" /></div>
             <div>
-              <h4>Mail me</h4>
-              <p>shahidulislamshohi7@gmail.com</p>
+              <h4 className="text-xl font-semibold">Mail me</h4>
+              <p className="text-lg font-semibold">+01738283277</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ function ContactPage() {
               ></textarea>
             </div>
             <button
-              className="btn bg-pink-500 text-lg text-white mt-3"
+              className="btn bg-pink-500 text-lg text-white mt-3 hover:text-black"
               type="submit"
             >
               Submit Form
