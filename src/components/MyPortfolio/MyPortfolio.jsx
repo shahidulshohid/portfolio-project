@@ -2,7 +2,7 @@
 import { Fade } from "react-awesome-reveal";
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const MyPortfolio = () => {
@@ -27,11 +27,14 @@ const MyPortfolio = () => {
             src={portfolio.projectImage}
             alt=""
           />
-          <p className="text-xl text-black font-bold">{portfolio.title}</p>
+          <p className="text-2xl text-gray-300 font-bold">{portfolio.title}</p>
+          <div className="flex justify-between">
           <Link to={`details/${portfolio.id}`}><button className="btn bg-pink-500 text-lg text-white mt-3 hover:text-black">
             Details
-          </button></Link>
-          {" "}
+          </button>
+          </Link>
+          <NavLink to={portfolio.liveLink} target="_blank"><button className="btn bg-pink-500 text-lg text-white mt-3 hover:text-black">Live Link</button></NavLink>
+          </div>
         </div>
       ))}
       </div>
