@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="md:flex justify-between items-center mt-32">
@@ -24,10 +25,11 @@ const Header = () => {
           </span>
         </h3>
         <div className="flex justify-start items-center gap-3">
-          <CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" />
-          <FaWhatsapp className="text-2xl text-white w-8 h-8 rounded-full" />
-          <CiLinkedin className="text-2xl text-white w-8 h-8 rounded-full" />
-          <FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" />
+        {/*  */}
+          <NavLink to='https://www.facebook.com/' target="_blank"><CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
+          <NavLink to="https://www.whatsapp.com/" target="_blank"><FaWhatsapp className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
+          <NavLink to="https://www.linkedin.com/" target="_blank"><CiLinkedin className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
+          <NavLink to="https://www.instagram.com/" target="_blank"><FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
         </div>
         <div>
           <a href="/files/resume.pdf" download>

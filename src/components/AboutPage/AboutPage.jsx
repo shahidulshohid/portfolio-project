@@ -9,7 +9,8 @@ const AboutPage = () => {
     }, [])
   return (
     <div className="mb-24" id="about">
-      <h3 className="text-3xl  text-black font-bold text-center mb-6">
+     <div className="bg-white px-6 py-12 mb-12 rounded-xl">
+     <h3 className="text-3xl  text-black font-bold text-center mb-6">
         About me
       </h3>
       <div className="lg:flex justify-between gap-6">
@@ -17,7 +18,7 @@ const AboutPage = () => {
           <h3 className="text-2xl font-bold">
             I'm Shahidul Ialam, a fon Developer
           </h3>
-          <p className="mt-2">
+          <p className="mt-2 text-gray-700">
             I am a passionate frontend developer specializing in creating
             intuitive and visually appealing user interfaces. With a strong
             foundation in HTML, CSS, and JavaScript, I craft responsive and
@@ -27,7 +28,7 @@ const AboutPage = () => {
             and staying updated with the latest trends and best practices in
             frontend development.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-gray-700">
             <span className="underline">My hobby</span> is traveling, which
             allows me to explore new places, experience diverse cultures, and
             connect with people from different walks of life. Traveling opens my
@@ -53,17 +54,18 @@ const AboutPage = () => {
           </h3>
         </div>
       </div>
+     </div>
       {/* education section */}
-      <div>
-      <h3 className="text-3xl  text-black font-bold text-center my-6">
+      <div className="bg-white px-6 pb-12 pt-6 rounded-xl">
+      <h3 className="text-3xl font-bold text-center mt-12 mb-6">
         Education
       </h3>
        <div className="flex flex-wrap justify-center items-center gap-6 text-center">
        {education?.map(item => (
-            <div>
-                <h3>Institution : {item.institution}</h3>
-                <p>Degree: {item.degree}</p>
-                <p>Year: {item.year}</p>
+            <div className="border-2 border-pink-500 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold">Institution : {item.institution}</h3>
+                <p className="text-lg font-semibold">Degree: {item.degree}</p>
+                <p className="text-lg font-semibold">Year: {item.year}</p>
             </div>
         ))}
        </div>

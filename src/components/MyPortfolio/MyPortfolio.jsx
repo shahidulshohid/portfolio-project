@@ -16,7 +16,7 @@ const MyPortfolio = () => {
   return (
     <div className="mb-24" id="portfolio">
       <div>
-        <h3 className="text-3xl  text-black font-bold text-center mb-6">Portfolio</h3>
+        <h3 className="text-3xl  text-white font-bold text-center mb-6">Portfolio</h3>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
       {portfolio?.map((portfolio) => (

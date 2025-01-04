@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 function App() {
 
   return (
-    <div className='h-auto w-full overflow-hidden bg-slate-400'>
+    <div className='h-auto w-full overflow-hidden bg-slate-500'>
       <div className='w-11/12 mx-auto'>
       <Navbar></Navbar>
       <Outlet></Outlet>
