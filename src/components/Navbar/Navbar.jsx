@@ -45,7 +45,7 @@ const Navbar = () => {
             </li>
             </ul>
           </div>
-          <a href="/#home" className="btn btn-ghost text-3xl font-bold text-black">Shahidul</a>
+          <a href="/#home" className="btn btn-ghost text-2xl md:text-3xl font-bold text-black">Shahidul</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

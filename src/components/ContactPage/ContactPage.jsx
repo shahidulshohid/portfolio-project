@@ -49,14 +49,14 @@ function ContactPage() {
             <div><IoMdMailOpen className="size-12"/></div>
             <div>
               <h4 className="text-xl font-semibold">Mail me</h4>
-              <p className="text-lg font-semibold">shahidulislamshohi7@gmail.com</p>
+              <p className="text-sm font-semibold">shahidulislamshohi7@gmail.com</p>
             </div>
           </div>
           <div className="flex gap-3 items-center mt-3">
             <div><PiPhoneCallFill className="size-12" /></div>
             <div>
               <h4 className="text-xl font-semibold">Mail me</h4>
-              <p className="text-lg font-semibold">+01738283277</p>
+              <p className="text-sm font-semibold">+01738283277</p>
             </div>
           </div>
         </div>
