@@ -32,34 +32,34 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-pink-400 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
              <li>
-              <a onClick={()=> handleActive('#home')} className={active === "#home" ? "text-white font-bold text-xl" : "text-xl"} href="#home">Home</a>
+              <a onClick={()=> handleActive('#home')} className={active === "#home" ? "text-white font-bold text-xl" : "text-xl"} href="/#home">Home</a>
             </li>
             <li>
-              <a onClick={()=> handleActive('#portfolio')} className={active === "#portfolio" ? "text-white font-bold text-xl" : "text-xl"} href="#portfolio">Portfolio</a>
+              <a onClick={()=> handleActive('#portfolio')} className={active === "#portfolio" ? "text-white font-bold text-xl" : "text-xl"} href="/#portfolio">Portfolio</a>
             </li>
             <li>
-            <a onClick={()=> handleActive('#about')} className={active === "#about" ? "text-white font-bold text-xl" : "text-xl"} href="#about">About</a>
+            <a onClick={()=> handleActive('#about')} className={active === "#about" ? "text-white font-bold text-xl" : "text-xl"} href="/#about">About</a>
             </li>
             <li>
-            <a onClick={()=> handleActive('#contact')} className={active === "#contact" ? "text-white font-bold text-xl" : "text-xl"} href="#contact">Contact</a>
+            <a onClick={()=> handleActive('#contact')} className={active === "#contact" ? "text-white font-bold text-xl" : "text-xl"} href="/#contact">Contact</a>
             </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl font-bold text-black">Portfolio</a>
+          <a href="/#home" className="btn btn-ghost text-3xl font-bold text-black">Shahidul</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a onClick={()=> handleActive('#home')} className={active === "#home" ? "text-white font-bold text-xl" : "text-xl"} href="#home">Home</a>
+              <a onClick={()=> handleActive('#home')} className={active === "#home" ? "text-white font-bold text-xl" : "text-xl"} href="/#home">Home</a>
             </li>
             <li>
-              <a onClick={()=> handleActive('#portfolio')} className={active === "#portfolio" ? "text-white font-bold text-xl" : "text-xl"} href="#portfolio">Portfolio</a>
+              <a onClick={()=> handleActive('#portfolio')} className={active === "#portfolio" ? "text-white font-bold text-xl" : "text-xl"} href="/#portfolio">Portfolio</a>
             </li>
             <li>
-            <a onClick={()=> handleActive('#about')} className={active === "#about" ? "text-white font-bold text-xl" : "text-xl"} href="#about">About</a>
+            <a onClick={()=> handleActive('#about')} className={active === "#about" ? "text-white font-bold text-xl" : "text-xl"} href="/#about">About</a>
             </li>
             <li>
-            <a onClick={()=> handleActive('#contact')} className={active === "#contact" ? "text-white font-bold text-xl" : "text-xl"} href="#contact">Contact</a>
+            <a onClick={()=> handleActive('#contact')} className={active === "#contact" ? "text-white font-bold text-xl" : "text-xl"} href="/#contact">Contact</a>
             </li>
           </ul>
         </div>

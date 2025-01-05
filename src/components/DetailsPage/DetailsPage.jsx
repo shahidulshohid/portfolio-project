@@ -16,7 +16,7 @@ const DetailsPage = () => {
   console.log(details);
 
   return (
-    <div className="my-24 w-6/12 mx-auto">
+    <div className="my-24 lg:w-6/12 mx-auto">
         <h3 className="text-3xl  text-white font-bold text-center mb-6">Details</h3>
       <div className="border p-3 rounded-xl space-y-2">
         {" "}
@@ -38,7 +38,7 @@ const DetailsPage = () => {
           </span>
         ))}
       </div></p>
-      <p className="text-lg text-gray-300">{details.description}</p>
+      <p className="text-lg text-gray-300"><span className="text-xl text-black">Description</span> : {details.description}</p>
       </div>
     </div>
   );

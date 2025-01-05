@@ -14,7 +14,7 @@ const MyPortfolio = () => {
   }, []);
   // console.log(portfolio);
   return (
-    <div className="mb-24" id="portfolio">
+    <div className="mb-24 mt-12" id="portfolio">
       <div>
         <h3 className="text-3xl  text-white font-bold text-center mb-6">Portfolio</h3>
       </div>

@@ -7,14 +7,14 @@ import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="md:flex justify-between items-center mt-32">
+    <div className="md:flex justify-center lg:gap-24 items-center mt-16 bg-[#111828] py-24">
       <div className="text-start space-y-2">
-        <h1 className="text-4xl font-bold">Hi, I'm Shahidul Islam</h1>
-        <h3 className="text-center text-3xl font-bold mb-8 mt-12 text-pink-500">
+        <h1 className="text-4xl font-bold text-pink-400">Hi, I'm Shahidul Islam</h1>
+        <h3 className="text-center text-3xl font-semibold mb-8 mt-12 text-pink-400">
           {" "}
           <span style={{ color: "red", fontWeight: "bold" }}>
             <Typewriter
-              words={["And I am frontend developer"]}
+              words={["I am frontend developer"]}
               loop={Infinity}
               cursor
               cursorStyle="|"
