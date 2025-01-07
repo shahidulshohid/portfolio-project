@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <div>
             <a href="/files/resume.pdf" download>
-              <button className="btn bg-pink-500 text-white text-lg hover:text-black">
+              <button className="btn bg-pink-500 text-white text-lg hover:text-black mr-3">
                 Download cv
               </button>
             </a>
