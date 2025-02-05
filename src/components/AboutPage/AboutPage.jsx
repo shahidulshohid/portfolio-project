@@ -11,7 +11,7 @@ const AboutPage = () => {
           </h3>
           <div className="lg:flex justify-between gap-6">
             <div className="lg:max-w-4xl">
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl md:text-3xl font-bold text-white">
                 I'm Shahidul Ialam, a fon Developer
               </h3>
               <p className="mt-2 text-white">
@@ -55,76 +55,6 @@ const AboutPage = () => {
           </div>
         </div>
       </Fade>
-      
-      <div className="mt-12 bg-white px-6 py-12 rounded-xl">
-        <h3 className="text-3xl text-black font-bold text-center mb-6">
-          My Skill
-        </h3>
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 55 }}
-                role="progressbar"
-              >
-                55%
-              </div>
-              <h3 className="text-xl font-bold mt-3">HTML</h3>
-            </div>
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 45 }}
-                role="progressbar"
-              >
-                45%
-              </div>
-              <h3 className="text-xl font-bold mt-2">CSS</h3>
-            </div>
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 40 }}
-                role="progressbar"
-              >
-                40%
-              </div>
-              <h3 className="text-xl font-bold mt-2">JAVASCRIPt</h3>
-            </div>
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 40 }}
-                role="progressbar"
-              >
-                40%
-              </div>
-              <h3 className="text-xl font-bold mt-2">REACt</h3>
-            </div>
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 45 }}
-                role="progressbar"
-              >
-                45%
-              </div>
-              <h3 className="text-xl font-bold mt-2">TAILWIND</h3>
-            </div>
-            <div>
-              <div
-                className="radial-progress bg-primary text-primary-content border-primary border-4"
-                style={{ "--value": 45 }}
-                role="progressbar"
-              >
-                45%
-              </div>
-              <h3 className="text-xl font-bold mt-2">DAISYUI</h3>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
