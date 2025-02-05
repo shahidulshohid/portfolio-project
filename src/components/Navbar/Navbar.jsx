@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [active, setActive] = useState("#home");
   const handleActive = (section) => {
-    setActive(section);
+    // setActive(section);
   };
   return (
     <div className="fixed left-0 right-0 top-0 z-50">
@@ -54,6 +54,19 @@ const Navbar = () => {
                   href="/#about"
                 >
                   About
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => handleActive("#education")}
+                  className={
+                    active === "#education"
+                      ? "text-white font-bold text-xl"
+                      : "text-xl"
+                  }
+                  href="/#education"
+                >
+                  Education
                 </a>
               </li>
               <li>
@@ -117,6 +130,19 @@ const Navbar = () => {
                 href="/#about"
               >
                 About
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => handleActive("#education")}
+                className={
+                  active === "#education"
+                    ? "text-white font-bold text-xl"
+                    : "text-xl"
+                }
+                href="/#education"
+              >
+                Education
               </a>
             </li>
             <li>

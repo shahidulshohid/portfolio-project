@@ -3,26 +3,26 @@
     {
       "id": 1,
       "institution": "Government Azizul Hoque college, Bogura",
-      "degree": "Master of Arts in Political Science",
-      "year": "20011 - 2013"
+      "degree": "Master of Social Science",
+      "year": "20012 - 2013"
     },
     {
       "id": 2,
       "institution": "Government Azizul Hoque college, Bogura",
-      "degree": "Bachelor of Science social Science",
-      "year": "2007 - 2011"
+      "degree": "Bachelor of Social Science",
+      "year": "2008 - 2009"
     },
     {
       "id": 3,
-      "institution": "Ranirhal school && college",
+      "institution": "Ranir Hat School and Technical College",
       "degree": "Higher Secondary Certificate",
       "year": "2005 - 2007"
     },
     {
       "id": 4,
-      "institution": "Gohail shilikha dakhil madrasha",
+      "institution": "Gohail Shilikha Dakhil Madrasha",
       "degree": "Secondary School Certificate",
-      "year": "2003 - 2005"
+      "year": "2004 - 2005"
     }
   ]
   
