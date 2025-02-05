@@ -7,12 +7,12 @@ import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="md:flex justify-center lg:gap-24 items-center mt-16 bg-[#111828] py-24">
-      <div className="text-start space-y-2">
-        <h1 className="text-4xl font-bold text-white">Hi, I'm Shahidul Islam</h1>
-        <h3 className="text-center text-3xl font-semibold mb-8 mt-12 text-pink-400">
+    <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center mt-16 py-12 md:py-24">
+      <div className="text-start space-y-2 mb-5 md:mb-0">
+        <h1 className="text-3xl md:text-4xl font-bold text-white">Hi, I'm Shahidul Islam</h1>
+        <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12">
           {" "}
-          <span style={{ color: "red", fontWeight: "bold" }}>
+          <span style={{ color: "black", fontWeight: "bold" }}>
             <Typewriter
               words={["I am frontend developer"]}
               loop={Infinity}
@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <img className="rounded-full" src={headerImg} alt="" />
+        <img className="rounded-xl h-[300px] w-[300px]" src={headerImg} alt="" />
       </div>
     </div>
   );

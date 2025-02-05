@@ -7,8 +7,8 @@ const HomePage = () => {
     return (
         <div id="home">
             <Header></Header>
-            <MyPortfolio></MyPortfolio>
             <AboutPage></AboutPage>
+            <MyPortfolio></MyPortfolio>
             <ContactPage></ContactPage>
         </div>
     );

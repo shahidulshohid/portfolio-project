@@ -9,8 +9,8 @@ const AboutPage = () => {
     }, [])
   return (
     <div className="mb-24" id="about">
-     <div className="bg-white px-6 py-12 mb-12 rounded-xl">
-     <h3 className="text-3xl  text-black font-bold text-center mb-6">
+     <div className=" bg-blend-color-burn px-6 py-12 mb-12 rounded-xl bg-[#427ada]">
+     <h3 className="text-3xl text-black font-bold text-center mb-6">
         About me
       </h3>
       <div className="lg:flex justify-between gap-6">
