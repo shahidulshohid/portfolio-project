@@ -26,7 +26,7 @@ const Header = () => {
         </h3>
         <div className="flex justify-start items-center gap-3">
         {/*  */}
-          <NavLink to='https://www.facebook.com/' target="_blank"><CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
+          <NavLink to='https://www.facebook.com/profile.php?id=100056264109156' target="_blank"><CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
           <NavLink to="https://www.whatsapp.com/" target="_blank"><FaWhatsapp className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
           <NavLink to="https://www.linkedin.com/" target="_blank"><CiLinkedin className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
           <NavLink to="https://www.instagram.com/" target="_blank"><FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
