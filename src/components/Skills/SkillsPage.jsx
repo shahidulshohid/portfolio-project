@@ -7,53 +7,56 @@ import express from '../../assets/logo/express.jpg'
 import react from '../../assets/logo/react.png'
 import tailwind from '../../assets/logo/tailwind.png'
 import node from '../../assets/logo/nodejs.jpg'
-import firebase from '../../assets/logo/firebase.png'
+import firebase from '../../assets/logo/firebase.jpg'
+import Marquee from "react-fast-marquee";
 
 const SkillsPage = () => {
   return (
-    <div className="mb-24">
+    <div className="mb-24" id='skills'>
       <div className="mt-12 px-6 py-12 rounded-xl">
-        <h3 className="text-3xl text-black font-bold text-center mb-6">
+        <h3 className="text-3xl text-white font-bold text-center mb-6">
           My Skill
         </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-24">
-            <div className='w-16 h-16'>
-                <img src={html} alt="" />
-                <h3 className="text-center mt-1">HTML</h3>
+        <Marquee>
+          <div className='flex flex-wrap justify-center items-center gap-12'>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={html} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">HTML</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={css} alt="" />
-                <h3 className="text-center mt-1">CSS</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={css} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">CSS</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={javascript} alt="" />
-                <h3 className="text-center mt-1">JAVASCRIPT</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={javascript} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">JAVASCRIPT</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={mongodb} alt="" />
-                <h3 className="text-center mt-1">MONGODB</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={mongodb} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">MONGODB</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={express} alt="" />
-                <h3 className="text-center mt-1">EXPRESS</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={express} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">EXPRESS</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={react} alt="" />
-                <h3 className="text-center mt-1">REACT</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={react} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">REACT</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={tailwind} alt="" />
-                <h3 className="text-center mt-1">TAILWIND</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={tailwind} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">TAILWIND</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={node} alt="" />
-                <h3 className="text-center mt-1">NODE</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={node} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">NODE</h3>
             </div>
-            <div className='w-16 h-16'>
-                <img src={firebase} alt="" />
-                <h3 className="text-center mt-1">FIREBASE</h3>
+            <div>
+                <img className='w-[100px] h-[100px] bg-white' src={firebase} alt="" />
+                <h3 className="text-center mt-1 text-white font-bold">FIREBASE</h3>
             </div>
           </div>
+          </Marquee>
       </div>
     </div>
   );

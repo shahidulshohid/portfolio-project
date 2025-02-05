@@ -12,7 +12,7 @@ const EducationPage = () => {
   return (
     <div>
       {/* education section */}
-      <Fade direction="up">
+      <Fade direction="down">
       <div className="border px-6 pb-12 pt-6 rounded-xl" id="education">
         <h3 className="text-3xl md:text-4xl text-white font-bold text-center mt-12 mb-6 animate__animated animate__bounce animate__zoomIn animate__slower">Education</h3>
         <div className="flex flex-wrap justify-center items-center gap-6 text-center">

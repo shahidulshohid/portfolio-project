@@ -58,6 +58,19 @@ const Navbar = () => {
               </li>
               <li>
                 <a
+                  onClick={() => handleActive("#skills")}
+                  className={
+                    active === "#skills"
+                      ? "text-white font-bold text-xl"
+                      : "text-xl"
+                  }
+                  href="/#skills"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
                   onClick={() => handleActive("#education")}
                   className={
                     active === "#education"
@@ -132,6 +145,19 @@ const Navbar = () => {
                 About
               </a>
             </li>
+              <li>
+                <a
+                  onClick={() => handleActive("#skills")}
+                  className={
+                    active === "#skills"
+                      ? "text-white font-bold text-xl"
+                      : "text-xl"
+                  }
+                  href="/#skills"
+                >
+                  Skills
+                </a>
+              </li>
             <li>
               <a
                 onClick={() => handleActive("#education")}
