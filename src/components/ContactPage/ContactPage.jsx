@@ -57,7 +57,7 @@ function ContactPage() {
             <div><PiPhoneCallFill className="size-12" /></div>
             <div>
               <h4 className="text-xl font-semibold">Call me</h4>
-              <p className="text-sm font-semibold">+8801738283277</p>
+              <p className="text-sm font-semibold">+8801738283277(WhatsApp)</p>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ const Header = () => {
           {" "}
           <span style={{ color: "black", fontWeight: "bold" }}>
             <Typewriter
-              words={["I am frontend developer"]}
+              words={["I am a Front-End Web Developer"]}
               loop={Infinity}
               cursor
               cursorStyle="|"
@@ -32,7 +32,7 @@ const Header = () => {
           <NavLink to="https://www.instagram.com/" target="_blank"><FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
         </div>
         <div>
-          <a href="/files/resume.pdf" download>
+          <a href="/files/shahidul_resume_for_frontend-developer.pdf" download>
             <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mt-2">
               Download cv
             </button>

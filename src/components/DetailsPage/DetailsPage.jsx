@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -16,8 +16,10 @@ const DetailsPage = () => {
   console.log(details);
 
   return (
-    <div className="my-28 lg:w-6/12 mx-auto">
-        <h3 className="text-3xl  text-white font-bold text-center mb-6">Details</h3>
+    <div className="my-28 lg:w-8/12 mx-auto">
+      <h3 className="text-3xl  text-white font-bold text-center mb-6">
+        Details
+      </h3>
       <div className="border p-3 rounded-xl space-y-2">
         {" "}
         <img
@@ -25,20 +27,39 @@ const DetailsPage = () => {
           src={details.projectImage}
           alt=""
         />
-        <p className="text-2xl text-gray-300 font-bold"><span className="text-2xl text-black">Title</span> : {details.title}</p>
-        <p className="text-lg text-black font-bold"><span className="text-xl text-black">Live Link</span> : <NavLink className="text-lg text-gray-300" to={details.liveLink} target="_blank">{details.liveLink}</NavLink></p>
-        <p className="text-xl text-black font-bold"><span className="text-xl text-black">GitHub Link</span> : <NavLink className="text-lg text-gray-300" to={details.githubLink} target="_blank">{details.githubLink}</NavLink></p>
-        <p className="text-xl text-black font-bold"><span className="text-xl text-black">Technologies</span> :  <div className="flex flex-wrap gap-2 mt-2">
-        {details.technologies &&details.technologies.map((item, index) => (
-          <span
-            key={index}
-            className="px-3 py-1 bg-gray-200 text-black rounded-full text-sm"
-          >
-            {item}
-          </span>
-        ))}
-      </div></p>
-      <p className="text-lg text-gray-300"><span className="text-xl text-black">Description</span> : {details.description}</p>
+        <p className="text-2xl text-white font-bold">
+          <span className="text-2xl text-black">Title</span> : {details.title}
+        </p>
+        <p className="text-xl text-black font-bold">
+          <span className="text-xl text-black">Technologies</span> :{" "}
+          <div className="flex flex-wrap gap-2 mt-2">
+            {details.technologies &&
+              details.technologies.map((item, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gray-200 text-black rounded-full text-sm"
+                >
+                  {item}
+                </span>
+              ))}
+          </div>
+        </p>
+        <p className="text-lg text-white">
+          <span className="text-xl text-black">Description</span> :{" "}
+          {details.description}
+        </p>
+        <div className="flex justify-between">
+          <NavLink to={details.githubLink} target="_blank">
+            <button className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black">
+              GitHub Link
+            </button>
+          </NavLink>
+          <NavLink to={details.liveLink} target="_blank">
+            <button className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black">
+              Live Link
+            </button>
+          </NavLink>
+        </div>
       </div>
     </div>
   );

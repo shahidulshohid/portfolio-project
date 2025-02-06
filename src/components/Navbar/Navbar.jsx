@@ -201,7 +201,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div>
-            <a href="/files/resume.pdf" download>
+            <a href="/files/shahidul_resume_for_frontend-developer.pdf" download>
               <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mr-3">
                 Download cv
               </button>
