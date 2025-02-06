@@ -33,7 +33,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="bg-sky-500 px-6 py-12 rounded-xl" id="contact">
+    <div className="bg-sky-500 px-6 py-12 rounded-xl mb-12" id="contact">
       <h3 className="text-3xl  text-black font-bold text-center">
         GET IN TOUCH
       </h3>
