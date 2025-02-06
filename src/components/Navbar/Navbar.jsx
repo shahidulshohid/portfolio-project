@@ -1,4 +1,5 @@
 import { useState } from "react";
+import shahidulLogo from '../../assets/shahidul_logo.png'
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
@@ -114,7 +115,8 @@ const Navbar = () => {
             href="/#home"
             className="btn btn-ghost text-2xl md:text-3xl font-bold text-black"
           >
-            Shahidul
+            <img className="w-10 h-10 rounded-full"  src={shahidulLogo} alt="" />
+            <span className="hidden lg:flex">Shahidul</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
