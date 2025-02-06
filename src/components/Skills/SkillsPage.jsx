@@ -12,7 +12,7 @@ import Marquee from "react-fast-marquee";
 
 const SkillsPage = () => {
   return (
-    <div className="pb-14" id='skills'>
+    <div className="pt-24" id='skills'>
       {/* <div> */}
         <h3 className="text-3xl text-white font-bold text-center mb-6">
           My Skill

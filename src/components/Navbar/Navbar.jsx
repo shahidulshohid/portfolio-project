@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-pink-400 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-blue-500 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
                 <a
@@ -92,7 +92,7 @@ const Navbar = () => {
                   }
                   href="/#portfolio"
                 >
-                  Portfolio
+                  Projects
                 </a>
               </li>
               <li>
@@ -181,7 +181,7 @@ const Navbar = () => {
                 }
                 href="/#portfolio"
               >
-                Portfolio
+                Projects
               </a>
             </li>
             <li>
@@ -202,7 +202,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <div>
             <a href="/files/resume.pdf" download>
-              <button className="btn bg-pink-500 text-white text-lg hover:text-black mr-3">
+              <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mr-3">
                 Download cv
               </button>
             </a>

@@ -16,12 +16,12 @@ const DetailsPage = () => {
   console.log(details);
 
   return (
-    <div className="my-24 lg:w-6/12 mx-auto">
+    <div className="my-28 lg:w-6/12 mx-auto">
         <h3 className="text-3xl  text-white font-bold text-center mb-6">Details</h3>
       <div className="border p-3 rounded-xl space-y-2">
         {" "}
         <img
-          className="h-[300px] object-cover rounded-t-xl mb-5"
+          className="h-[300px] w-full object-cover rounded-t-xl mb-5"
           src={details.projectImage}
           alt=""
         />

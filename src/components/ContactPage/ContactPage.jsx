@@ -33,8 +33,9 @@ function ContactPage() {
   };
 
   return (
-    <div className="bg-sky-500 px-6 py-12 rounded-xl mb-12" id="contact">
-      <h3 className="text-3xl  text-black font-bold text-center">
+   <div className="mt-28 mb-24"  id="contact">
+     <div className="bg-sky-500 px-6 p-6 rounded-xl">
+      <h3 className="text-3xl  text-white font-bold text-center">
         GET IN TOUCH
       </h3>
       <div className="md:flex justify-between space-y-5 md:space-y-0 md:gap-5 lg:gap-12">
@@ -55,8 +56,8 @@ function ContactPage() {
           <div className="flex gap-3 items-center mt-3">
             <div><PiPhoneCallFill className="size-12" /></div>
             <div>
-              <h4 className="text-xl font-semibold">Mail me</h4>
-              <p className="text-sm font-semibold">+01738283277</p>
+              <h4 className="text-xl font-semibold">Call me</h4>
+              <p className="text-sm font-semibold">+8801738283277</p>
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@ function ContactPage() {
               ></textarea>
             </div>
             <button
-              className="btn bg-pink-500 text-lg text-white mt-3 hover:text-black"
+              className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black"
               type="submit"
             >
               Submit Form
@@ -106,6 +107,7 @@ function ContactPage() {
         </div>
       </div>
     </div>
+   </div>
   );
 }
 

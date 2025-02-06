@@ -33,7 +33,7 @@ const Header = () => {
         </div>
         <div>
           <a href="/files/resume.pdf" download>
-            <button className="btn bg-pink-500 text-white text-lg hover:text-black mt-2">
+            <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mt-2">
               Download cv
             </button>
           </a>
