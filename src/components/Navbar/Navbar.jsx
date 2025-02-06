@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [active, setActive] = useState("#home");
   const handleActive = (section) => {
-    // setActive(section);
+    setActive(section);
   };
   return (
     <div className="fixed left-0 right-0 top-0 z-50">

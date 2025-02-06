@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center mt-16 py-12 md:py-24">
+    <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-2 mb-5 md:mb-0">
         <h1 className="text-3xl md:text-4xl font-bold text-white">Hi, I'm Shahidul Islam</h1>
         <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12">

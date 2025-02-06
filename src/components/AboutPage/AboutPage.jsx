@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 const AboutPage = () => {
   return (
-    <div className="mb-24" id="about">
+    <div className="pt-20" id="about">
       <Fade direction="left">
         <div className=" bg-blend-color-burn px-6 py-12 mb-12 rounded-xl bg-[#0FADC2]">
           <h3 className="text-3xl md:text-4xl text-white font-bold text-center mb-6">
