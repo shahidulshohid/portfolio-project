@@ -10,11 +10,11 @@ const Header = () => {
     <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-2 mb-5 md:mb-0">
         <h1 className="text-3xl md:text-4xl font-bold text-white">Hi, I'm Shahidul Islam</h1>
-        <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12">
+        <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12 text-white">
           {" "}
-          <span style={{ color: "black", fontWeight: "bold" }}>
+          <span style={{ color: "red", fontWeight: "bold" }}>
             <Typewriter
-              words={["I am a Front-End Web Developer"]}
+              words={["Front-End Developer", "Mern Stack Developer", "JavaScript Developer", "Web Developer"]}
               loop={Infinity}
               cursor
               cursorStyle="|"
