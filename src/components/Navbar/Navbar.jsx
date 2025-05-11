@@ -1,5 +1,5 @@
 import { useState } from "react";
-import shahidulLogo from '../../assets/shahidul_logo.png'
+import shahidulLogo from "../../assets/shahidul_logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
@@ -8,7 +8,7 @@ const Navbar = () => {
   };
   return (
     <div className="fixed left-0 right-0 top-0 z-50">
-      <div className="navbar bg-[#2376ed]">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,25 +31,25 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-blue-500 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li>
+              {/* <li>
                 <a
                   onClick={() => handleActive("#home")}
                   className={
                     active === "#home"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#home"
                 >
                   Home
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   onClick={() => handleActive("#about")}
                   className={
                     active === "#about"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#about"
@@ -62,7 +62,7 @@ const Navbar = () => {
                   onClick={() => handleActive("#skills")}
                   className={
                     active === "#skills"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#skills"
@@ -75,7 +75,7 @@ const Navbar = () => {
                   onClick={() => handleActive("#education")}
                   className={
                     active === "#education"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#education"
@@ -88,7 +88,7 @@ const Navbar = () => {
                   onClick={() => handleActive("#portfolio")}
                   className={
                     active === "#portfolio"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#portfolio"
@@ -101,7 +101,7 @@ const Navbar = () => {
                   onClick={() => handleActive("#contact")}
                   className={
                     active === "#contact"
-                      ? "text-white font-bold text-xl"
+                      ? "text-green-500 font-bold text-xl"
                       : "text-xl"
                   }
                   href="/#contact"
@@ -112,34 +112,35 @@ const Navbar = () => {
             </ul>
           </div>
           <a
+            onClick={() => handleActive("#home")}
             href="/#home"
             className="btn btn-ghost text-2xl md:text-3xl font-bold text-black"
           >
-            <img className="w-10 h-10 rounded-full"  src={shahidulLogo} alt="" />
+            <img className="w-10 h-10 rounded-full" src={shahidulLogo} alt="" />
             <span className="hidden lg:flex">Shahidul</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            {/* <li>
               <a
                 onClick={() => handleActive("#home")}
                 className={
                   active === "#home"
-                    ? "text-white font-bold text-xl"
+                    ? "text-green font-bold text-xl"
                     : "text-xl"
                 }
                 href="/#home"
               >
                 Home
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 onClick={() => handleActive("#about")}
                 className={
                   active === "#about"
-                    ? "text-white font-bold text-xl"
+                    ? "text-green-500 font-bold text-xl"
                     : "text-xl"
                 }
                 href="/#about"
@@ -147,25 +148,25 @@ const Navbar = () => {
                 About
               </a>
             </li>
-              <li>
-                <a
-                  onClick={() => handleActive("#skills")}
-                  className={
-                    active === "#skills"
-                      ? "text-white font-bold text-xl"
-                      : "text-xl"
-                  }
-                  href="/#skills"
-                >
-                  Skills
-                </a>
-              </li>
+            <li>
+              <a
+                onClick={() => handleActive("#skills")}
+                className={
+                  active === "#skills"
+                    ? "text-green-500 font-bold text-xl"
+                    : "text-xl"
+                }
+                href="/#skills"
+              >
+                Skills
+              </a>
+            </li>
             <li>
               <a
                 onClick={() => handleActive("#education")}
                 className={
                   active === "#education"
-                    ? "text-white font-bold text-xl"
+                    ? "text-green-500 font-bold text-xl"
                     : "text-xl"
                 }
                 href="/#education"
@@ -178,7 +179,7 @@ const Navbar = () => {
                 onClick={() => handleActive("#portfolio")}
                 className={
                   active === "#portfolio"
-                    ? "text-white font-bold text-xl"
+                    ? "text-green-500 font-bold text-xl"
                     : "text-xl"
                 }
                 href="/#portfolio"
@@ -191,7 +192,7 @@ const Navbar = () => {
                 onClick={() => handleActive("#contact")}
                 className={
                   active === "#contact"
-                    ? "text-white font-bold text-xl"
+                    ? "text-green-500 font-bold text-xl"
                     : "text-xl"
                 }
                 href="/#contact"
@@ -203,8 +204,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div>
-            <a href="/files/shahidul_resume_for_frontend-developer.pdf" download>
-              <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mr-3">
+            <a
+              href="/files/shahidul_resume_for_frontend-developer.pdf"
+              download
+            >
+              <button className="btn bg-blue-600 border-none text-green text-lg hover:text-black mr-3">
                 Download cv
               </button>
             </a>
