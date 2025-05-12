@@ -1,25 +1,64 @@
-// FireParticles.tsx
-import React, { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFirePreset } from "@tsparticles/preset-fire";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const FireParticles = () => {
-  const particlesInit = useCallback(async (engine) => {
-    // Load the fire preset
-    await loadFirePreset(engine);
-  }, []);
+  const [init, setInit] = useState(false);
 
+  // Initialize the particles engine
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
   return (
-    <Particles
-      id="tsparticles-fire"
-      init={particlesInit}
-      options={{
-        preset: "fire",
-        background: {
-          color: "#000"
-        }
-      }}
-    />
+    <div>
+      {init && (
+        <Particles
+          id="tsparticles"
+          options={{
+            fullScreen: { enable: false },
+            background: {
+              color: {
+                value: "#ffffff",
+              },
+            },
+            particles: {
+              number: {
+                value: 50,
+              },
+              color: {
+                value: "#000000",
+              },
+              shape: {
+                type: "circle",
+              },
+              opacity: {
+                value: 0.5,
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
+              move: {
+                enable: true,
+                speed: 2,
+              },
+            },
+          }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+          }}
+        />
+      )}
+    </div>
   );
 };
 
