@@ -7,7 +7,7 @@ const Navbar = () => {
     setActive(section);
   };
   return (
-    <div className="fixed left-0 right-0 top-0 z-50">
+    <div className="fixed left-0 right-0 top-0 z-50 bg-[#000] border-b">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -50,7 +50,7 @@ const Navbar = () => {
                   className={
                     active === "#about"
                       ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
+                      : "text-xl text-white hover:bg-gray-700"
                   }
                   href="/#about"
                 >
@@ -63,7 +63,7 @@ const Navbar = () => {
                   className={
                     active === "#skills"
                       ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
+                      : "text-xl text-white hover:bg-gray-700"
                   }
                   href="/#skills"
                 >
@@ -76,7 +76,7 @@ const Navbar = () => {
                   className={
                     active === "#education"
                       ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
+                      : "text-xl text-white hover:bg-gray-700"
                   }
                   href="/#education"
                 >
@@ -89,7 +89,7 @@ const Navbar = () => {
                   className={
                     active === "#portfolio"
                       ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
+                      : "text-xl text-white hover:bg-gray-700"
                   }
                   href="/#portfolio"
                 >
@@ -102,7 +102,7 @@ const Navbar = () => {
                   className={
                     active === "#contact"
                       ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
+                      : "text-xl text-white hover:bg-gray-700"
                   }
                   href="/#contact"
                 >
@@ -117,7 +117,7 @@ const Navbar = () => {
             className="btn btn-ghost text-2xl md:text-3xl font-bold text-black"
           >
             <img className="w-10 h-10 rounded-full" src={shahidulLogo} alt="" />
-            <span className="hidden lg:flex">Shahidul</span>
+            <span className="hidden lg:flex text-white">Shahidul</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -141,7 +141,7 @@ const Navbar = () => {
                 className={
                   active === "#about"
                     ? "text-green-500 font-bold text-xl"
-                    : "text-xl"
+                    : "text-xl text-white hover:bg-gray-700"
                 }
                 href="/#about"
               >
@@ -154,7 +154,7 @@ const Navbar = () => {
                 className={
                   active === "#skills"
                     ? "text-green-500 font-bold text-xl"
-                    : "text-xl"
+                    : "text-xl text-white hover:bg-gray-700"
                 }
                 href="/#skills"
               >
@@ -167,7 +167,7 @@ const Navbar = () => {
                 className={
                   active === "#education"
                     ? "text-green-500 font-bold text-xl"
-                    : "text-xl"
+                    : "text-xl text-white hover:bg-gray-700"
                 }
                 href="/#education"
               >
@@ -180,7 +180,7 @@ const Navbar = () => {
                 className={
                   active === "#portfolio"
                     ? "text-green-500 font-bold text-xl"
-                    : "text-xl"
+                    : "text-xl text-white hover:bg-gray-700"
                 }
                 href="/#portfolio"
               >
@@ -192,8 +192,8 @@ const Navbar = () => {
                 onClick={() => handleActive("#contact")}
                 className={
                   active === "#contact"
-                    ? "text-green-500 font-bold text-xl"
-                    : "text-xl"
+                    ? "text-green-500 border-b-2 border-green-500 font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#contact"
               >

@@ -9,12 +9,23 @@ const Header = () => {
   return (
     <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-2 mb-5 md:mb-0">
-        <h1 className="text-3xl md:text-4xl font-bold text-white">Hi, I'm Shahidul Islam</h1>
+        <small class="small-text">
+          {" "}
+          <span>Welcome</span> to my portfolio website! &#x2794;{" "}
+        </small>
+        <h1 className="text-3xl md:text-4xl font-bold text-white">
+          Hi, I'm Shahidul Islam
+        </h1>
         <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12 text-white">
           {" "}
           <span style={{ color: "red", fontWeight: "bold" }}>
             <Typewriter
-              words={["Front-End Developer", "Mern Stack Developer", "JavaScript Developer", "Web Developer"]}
+              words={[
+                "Front-End Developer",
+                "Mern Stack Developer",
+                "JavaScript Developer",
+                "Web Developer",
+              ]}
               loop={Infinity}
               cursor
               cursorStyle="|"
@@ -25,11 +36,22 @@ const Header = () => {
           </span>
         </h3>
         <div className="flex justify-start items-center gap-3">
-        {/*  */}
-          <NavLink to='https://www.facebook.com/profile.php?id=100056264109156' target="_blank"><CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
-          <NavLink to="https://www.whatsapp.com/" target="_blank"><FaWhatsapp className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
-          <NavLink to="https://www.linkedin.com/" target="_blank"><CiLinkedin className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
-          <NavLink to="https://www.instagram.com/" target="_blank"><FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" /></NavLink>
+          {/*  */}
+          <NavLink
+            to="https://www.facebook.com/profile.php?id=100056264109156"
+            target="_blank"
+          >
+            <CiFacebook className="text-2xl text-white w-8 h-8 rounded-full" />
+          </NavLink>
+          <NavLink to="https://www.whatsapp.com/" target="_blank">
+            <FaWhatsapp className="text-2xl text-white w-8 h-8 rounded-full" />
+          </NavLink>
+          <NavLink to="https://www.linkedin.com/" target="_blank">
+            <CiLinkedin className="text-2xl text-white w-8 h-8 rounded-full" />
+          </NavLink>
+          <NavLink to="https://www.instagram.com/" target="_blank">
+            <FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" />
+          </NavLink>
         </div>
         <div>
           <a href="/files/shahidul_resume_for_frontend-developer.pdf" download>
@@ -40,7 +62,11 @@ const Header = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <img className="rounded-xl h-[300px] w-[300px]" src={headerImg} alt="" />
+        <img
+          className="rounded-xl h-[300px] w-[300px]"
+          src={headerImg}
+          alt=""
+        />
       </div>
     </div>
   );
