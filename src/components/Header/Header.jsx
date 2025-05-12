@@ -2,7 +2,6 @@ import headerImg from "../../assets/headerImg.jpg";
 import { CiFacebook } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 import { BsCloudDownload } from "react-icons/bs";

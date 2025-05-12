@@ -1,5 +1,6 @@
 import { useState } from "react";
 import shahidulLogo from "../../assets/shahidul_logo.png";
+import { BsCloudDownload } from "react-icons/bs";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
@@ -49,8 +50,8 @@ const Navbar = () => {
                   onClick={() => handleActive("#about")}
                   className={
                     active === "#about"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl text-white hover:bg-gray-700"
+                      ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                   }
                   href="/#about"
                 >
@@ -62,8 +63,8 @@ const Navbar = () => {
                   onClick={() => handleActive("#skills")}
                   className={
                     active === "#skills"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl text-white hover:bg-gray-700"
+                      ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                   }
                   href="/#skills"
                 >
@@ -75,8 +76,8 @@ const Navbar = () => {
                   onClick={() => handleActive("#education")}
                   className={
                     active === "#education"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl text-white hover:bg-gray-700"
+                      ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                   }
                   href="/#education"
                 >
@@ -88,8 +89,8 @@ const Navbar = () => {
                   onClick={() => handleActive("#portfolio")}
                   className={
                     active === "#portfolio"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl text-white hover:bg-gray-700"
+                     ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                   }
                   href="/#portfolio"
                 >
@@ -101,8 +102,8 @@ const Navbar = () => {
                   onClick={() => handleActive("#contact")}
                   className={
                     active === "#contact"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl text-white hover:bg-gray-700"
+                      ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                   }
                   href="/#contact"
                 >
@@ -140,8 +141,8 @@ const Navbar = () => {
                 onClick={() => handleActive("#about")}
                 className={
                   active === "#about"
-                    ? "text-green-500 font-bold text-xl"
-                    : "text-xl text-white hover:bg-gray-700"
+                    ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#about"
               >
@@ -153,8 +154,8 @@ const Navbar = () => {
                 onClick={() => handleActive("#skills")}
                 className={
                   active === "#skills"
-                    ? "text-green-500 font-bold text-xl"
-                    : "text-xl text-white hover:bg-gray-700"
+                    ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#skills"
               >
@@ -166,8 +167,8 @@ const Navbar = () => {
                 onClick={() => handleActive("#education")}
                 className={
                   active === "#education"
-                    ? "text-green-500 font-bold text-xl"
-                    : "text-xl text-white hover:bg-gray-700"
+                    ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#education"
               >
@@ -179,8 +180,8 @@ const Navbar = () => {
                 onClick={() => handleActive("#portfolio")}
                 className={
                   active === "#portfolio"
-                    ? "text-green-500 font-bold text-xl"
-                    : "text-xl text-white hover:bg-gray-700"
+                    ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
+                    : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#portfolio"
               >
@@ -192,7 +193,7 @@ const Navbar = () => {
                 onClick={() => handleActive("#contact")}
                 className={
                   active === "#contact"
-                    ? "text-green-500 border-b-2 border-green-500 font-bold text-lg"
+                    ? "text-[#9CC842] border-b-2 border-[#9CC842] font-bold text-lg"
                     : "text-lg text-white hover:bg-gray-700"
                 }
                 href="/#contact"
@@ -203,17 +204,28 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div>
+          <div className="border border-[#417E38] mr-3 px-3 py-1 rounded-lg">
             <a
               href="/files/shahidul_resume_for_frontend-developer.pdf"
-              download
+              download className="flex justify-center items-center space-x-2"
             >
-              <button className="btn bg-blue-600 border-none text-green text-lg hover:text-black mr-3">
+              <button className="text-white text-lg">
                 Download cv
               </button>
+            <BsCloudDownload className="text-white" />
             </a>
           </div>
         </div>
+        {/* <div className="bg-[#417e381a] border-2 border-[#417e384d] hover:bg-[#417e383a] hover:border-[#417e384d] rounded-lg max-w-lg">
+          <a
+            href="/files/shahidul_resume_for_frontend-developer.pdf"
+            className="flex justify-center items-center space-x-2 my-1"
+            download
+          >
+            <button className="text-white">Download cv</button>
+            <BsCloudDownload className="text-white" />
+          </a>
+        </div> */}
       </div>
     </div>
   );
