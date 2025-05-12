@@ -78,7 +78,7 @@ const Header = () => {
       </div>
       <div className="flex justify-center items-center">
         <img
-          className="rounded-xl h-[300px] w-[300px]"
+          className="rounded-full h-[400px] w-[400px]"
           src={headerImg}
           alt=""
         />
