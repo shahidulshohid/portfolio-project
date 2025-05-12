@@ -9,16 +9,24 @@ const Header = () => {
   return (
     <div className="md:flex justify-center md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-2 mb-5 md:mb-0">
-        <small class="small-text">
-          {" "}
-          <span>Welcome</span> to my portfolio website! &#x2794;{" "}
-        </small>
-        <h1 className="text-3xl md:text-4xl font-bold text-white">
+        <div className="font-bold text-lg">
+          <small className="text-[#9CC842] bg-[#2c682c96] py-2 px-2 rounded-full border-2 border-[#417e384d]">
+            {" "}
+            <span
+              className="bg-[#417E38] py-1 px-2 rounded-full text-white mr-2
+          "
+            >
+              Welcome
+            </span>{" "}
+            to my portfolio website! &#x2794;{" "}
+          </small>
+        </div>
+        <h1 className="text-3xl md:text-4xl font-bold text-white pt-2">
           Hi, I'm Shahidul Islam
         </h1>
         <h3 className="text-center text-2xl md:text-3xl font-semibold mb-8 mt-12 text-white">
           {" "}
-          <span style={{ color: "red", fontWeight: "bold" }}>
+          <span style={{ color: "#417E38", fontWeight: "bold" }}>
             <Typewriter
               words={[
                 "Front-End Developer",
@@ -53,9 +61,9 @@ const Header = () => {
             <FaInstagram className="text-2xl text-white w-8 h-8 rounded-full" />
           </NavLink>
         </div>
-        <div>
+        <div className="bg-[#417e381a] border-2 border-[#417e384d] hover:bg-[#417e383a] hover:border-[#417e384d] rounded-lg text-center">
           <a href="/files/shahidul_resume_for_frontend-developer.pdf" download>
-            <button className="btn bg-blue-600 border-none text-white text-lg hover:text-black mt-2">
+            <button className="text-white">
               Download cv
             </button>
           </a>
