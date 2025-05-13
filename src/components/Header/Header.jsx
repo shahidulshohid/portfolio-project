@@ -38,7 +38,7 @@ const Header = () => {
               loop={Infinity}
               cursor
               cursorStyle="|"
-              typeSpeed={70}
+              typeSpeed={40}
               deleteSpeed={50}
               delaySpeed={1000}
             />
