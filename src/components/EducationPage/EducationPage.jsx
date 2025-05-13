@@ -19,12 +19,11 @@ const EducationPage = () => {
         <div className="flex flex-wrap justify-center items-center gap-6 text-center">
           {education?.map((item) => (
             <Fade direction="up">
-              <div className="border-2  bg-blue-500 p-6 rounded-lg border-none">
-                <h3 className="text-xl font-semibold">
+              <div className="border-2 p-6 rounded-lg border-none">
+                <h3 className="text-xl font-semibold text-white">
                   Institution : {item.institution}
                 </h3>
-                <p className="text-lg font-semibold">Degree: {item.degree}</p>
-                <p className="text-lg font-semibold">Year: {item.year}</p>
+                <p className="text-lg font-semibold text-white">Degree: {item.degree}</p>
               </div>
             </Fade>
           ))}

@@ -13,10 +13,11 @@ import Marquee from "react-fast-marquee";
 const SkillsPage = () => {
   return (
     <div className="pt-24" id='skills'>
-      {/* <div> */}
-        <h3 className="text-3xl text-white font-bold text-center mb-6">
-          My Skill
+        <div>
+        <h3 className="text-white font-bold text-3xl border-t pt-16 mb-16 mt-10">
+          My Skills
         </h3>
+      </div>
         <Marquee>
           <div className='flex flex-wrap justify-center items-center gap-12'>
             <div>
@@ -58,7 +59,6 @@ const SkillsPage = () => {
           </div>
           </Marquee>
       </div>
-    // </div>
   );
 };
 
