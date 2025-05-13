@@ -1,13 +1,14 @@
-import headerImg from "../../assets/headerImg.jpg";
+
 import { CiFacebook } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 import { BsCloudDownload } from "react-icons/bs";
+import ImageComponent from "./ImageComponent";
 const Header = () => {
   return (
-    <div className="md:flex justify-between md:gap-5 lg:gap-24 items-center pt-32">
+    <div className="lg:flex justify-between md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-4 mb-5 md:mb-0">
         <div className="font-bold text-lg">
           <small className="text-[#9CC842] bg-[#2c682c96] py-2 px-2 rounded-full border-2 border-[#417e384d]">
@@ -52,7 +53,7 @@ const Header = () => {
             className="flex justify-center items-center space-x-2 my-1"
             download
           >
-            <button className="text-white">Download cv</button>
+            <button className="text-white font-bold">Download cv</button>
             <BsCloudDownload className="text-white" />
           </a>
         </div>
@@ -62,25 +63,21 @@ const Header = () => {
             to="https://www.facebook.com/profile.php?id=100056264109156"
             target="_blank" className="flex justify-center items-center text-center space-x-1 bg-gray-700 px-2 py-1 rounded-sm"
           >
-            <CiFacebook className="text-sm w-6 h-6 text-white" /> <small className="text-[#4da43f] hover:text-white text-sm"
+            <CiFacebook className="text-sm w-6 h-6 text-white" /> <small className="text-[#4da43f] font-bold hover:text-white text-sm"
             >Facebook</small>
           </NavLink>
           <NavLink to="https://www.whatsapp.com/" target="_blank" className="flex justify-center items-center text-center space-x-1 bg-gray-700 px-2 py-1 rounded-sm">
-            <FaWhatsapp className="text-sm w-6 h-6 text-white" /> <small className="text-[#4da43f] hover:text-white text-sm"
+            <FaWhatsapp className="text-sm w-6 h-6 text-white" /> <small className="text-[#4da43f] font-bold hover:text-white text-sm"
             >Whatsapp</small>
           </NavLink>
           <NavLink to="https://www.linkedin.com/" target="_blank" className="flex justify-center items-center text-center space-x-1 bg-gray-700 px-2 py-1 rounded-sm">
-            <CiLinkedin className="text-sm w-6 h-6 text-white"/> <small className="text-[#4da43f] hover:text-white text-sm"
+            <CiLinkedin className="text-sm w-6 h-6 text-white"/> <small className="text-[#4da43f] font-bold hover:text-white text-sm"
             >Linkedin</small>
           </NavLink>
         </div>
       </div>
-      <div className="flex justify-center items-center">
-        <img
-          className="rounded-full h-[400px] w-[400px]"
-          src={headerImg}
-          alt=""
-        />
+      <div className="flex justify-center items-center mt-16 lg:mt-0 lg:mr-20">
+        <ImageComponent></ImageComponent>
       </div>
     </div>
   );

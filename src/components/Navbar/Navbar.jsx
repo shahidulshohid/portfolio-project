@@ -32,19 +32,6 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-blue-500 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {/* <li>
-                <a
-                  onClick={() => handleActive("#home")}
-                  className={
-                    active === "#home"
-                      ? "text-green-500 font-bold text-xl"
-                      : "text-xl"
-                  }
-                  href="/#home"
-                >
-                  Home
-                </a>
-              </li> */}
               <li>
                 <a
                   onClick={() => handleActive("#about")}
@@ -123,19 +110,6 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            {/* <li>
-              <a
-                onClick={() => handleActive("#home")}
-                className={
-                  active === "#home"
-                    ? "text-green font-bold text-xl"
-                    : "text-xl"
-                }
-                href="/#home"
-              >
-                Home
-              </a>
-            </li> */}
             <li>
               <a
                 onClick={() => handleActive("#about")}
@@ -209,23 +183,13 @@ const Navbar = () => {
               href="/files/shahidul_resume_for_frontend-developer.pdf"
               download className="flex justify-center items-center space-x-2"
             >
-              <button className="text-white text-lg">
+              <button className="text-white font-bold">
                 Download cv
               </button>
             <BsCloudDownload className="text-white" />
             </a>
           </div>
         </div>
-        {/* <div className="bg-[#417e381a] border-2 border-[#417e384d] hover:bg-[#417e383a] hover:border-[#417e384d] rounded-lg max-w-lg">
-          <a
-            href="/files/shahidul_resume_for_frontend-developer.pdf"
-            className="flex justify-center items-center space-x-2 my-1"
-            download
-          >
-            <button className="text-white">Download cv</button>
-            <BsCloudDownload className="text-white" />
-          </a>
-        </div> */}
       </div>
     </div>
   );
