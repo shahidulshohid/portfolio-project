@@ -180,11 +180,11 @@ const Navbar = () => {
         <div className="navbar-end">
           <div className="border border-[#417E38] mr-3 px-3 py-1 rounded-lg">
             <a
-              href="/files/shahidul_resume_for_frontend-developer.pdf"
+              href="/files/cv-of shahidul islam.pdf"
               download className="flex justify-center items-center space-x-2"
             >
               <button className="text-white font-bold">
-                Download cv
+                Download CV
               </button>
             <BsCloudDownload className="text-white" />
             </a>

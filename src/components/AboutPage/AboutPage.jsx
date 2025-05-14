@@ -23,7 +23,7 @@ const AboutPage = () => {
           </div>
           <div className="space-y-3 text-lg">
             <Fade direction="up">
-            <p>
+            <p className="text-justify">
               I am a passionate <small className="text-[#4da43f] text-lg font-semibold">Frontend developer </small>specializing in creating
               intuitive and visually appealing user interfaces. With a strong
               foundation in HTML, CSS, and JavaScript I craft <small className="text-[#4da43f] text-lg font-semibold">responsive</small> and
@@ -34,7 +34,7 @@ const AboutPage = () => {
               frontend development</small>.
             </p></Fade>
             <Fade direction="up">
-            <p>
+            <p className="text-justify">
               My hobby is <small className="text-[#4da43f] text-lg font-semibold">traveling</small>, which allows me to explore new places,
               experience diverse cultures, and connect with people from
               different walks of life. Traveling opens my mind to <small className="text-[#4da43f] text-lg font-semibold">new

@@ -23,15 +23,15 @@ const Header = () => {
           </small>
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-white">
-          Hi, I'm Shahidul Islam
+          Hi there, I'm Shahidul Islam
         </h1>
-        <h3 className="text-center text-2xl md:text-3xl font-semibold text-white">
+        <h3 className="text-2xl md:text-3xl font-semibold text-white">
           {" "}
           <span style={{ color: "#417E38", fontWeight: "bold" }}>
             <Typewriter
               words={[
                 "Front-End Developer",
-                "Mern Stack Developer",
+                "MERN-Stack Developer",
                 "JavaScript Developer",
                 "Web Developer",
               ]}
@@ -49,12 +49,13 @@ const Header = () => {
         </div>
         <div className="bg-[#417e381a] border-2 border-[#417e384d] hover:bg-[#417e383a] hover:border-[#417e384d] rounded-lg max-w-lg">
           <a
-            href="/files/shahidul_resume_for_frontend-developer.pdf"
+            // href="/files/shahidul_resume_for_frontend-developer.pdf"
+            href="/files/cv-of shahidul islam.pdf"
             className="flex justify-center items-center space-x-2 my-1"
             download
           >
-            <button className="text-white font-bold">Download cv</button>
-            <BsCloudDownload className="text-white" />
+            <button className="text-[#9CC842] font-bold">Download CV</button>
+            <BsCloudDownload className="text-[#9CC842]" />
           </a>
         </div>
         <div className="flex justify-start items-center gap-3">

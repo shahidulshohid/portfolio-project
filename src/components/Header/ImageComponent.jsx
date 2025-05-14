@@ -6,7 +6,7 @@ const ImageComponent = () => {
     <div className="com">
       <a className="th" href="https://unsplash.com/photos/UrfpprfDB0k" target="_blank" rel="noopener noreferrer">
         <img 
-          src={headerImg} 
+          src={headerImg}
           alt="Unsplash Image" 
         />
       </a>
