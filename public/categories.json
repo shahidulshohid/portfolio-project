@@ -1,0 +1,18 @@
+[
+    {
+        "id":"1",
+        "category":"Programming Language"
+    },
+    {
+        "id":"2",
+        "category":"Libraries & Frameworks"
+    },
+    {
+        "id":"3",
+        "category":"Database"
+    },
+    {
+        "id":"5",
+        "category":"Tool & Platforms"
+    }
+]

@@ -1,24 +1,37 @@
-
-import html from '../../assets/logo/html.png'
-import css from '../../assets/logo/css.png'
-import javascript from '../../assets/logo/javascript.png'
-import mongodb from '../../assets/logo/mongodb.png'
-import express from '../../assets/logo/express.jpg'
-import react from '../../assets/logo/react.png'
-import tailwind from '../../assets/logo/tailwind.png'
-import node from '../../assets/logo/nodejs.jpg'
-import firebase from '../../assets/logo/firebase.jpg'
+import html from "../../assets/logo/html.png";
+import css from "../../assets/logo/css.png";
+import javascript from "../../assets/logo/javascript.png";
+import mongodb from "../../assets/logo/mongodb.png";
+import express from "../../assets/logo/express.jpg";
+import react from "../../assets/logo/react.png";
+import tailwind from "../../assets/logo/tailwind.png";
+import node from "../../assets/logo/nodejs.jpg";
+import firebase from "../../assets/logo/firebase.jpg";
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 
 const SkillsPage = () => {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    fetch("/categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
   return (
-    <div className="pt-24" id='skills'>
-        <div>
+    <div className="pt-24" id="skills">
+      <div>
         <h3 className="text-white font-bold text-3xl border-t pt-16 mb-16 mt-10">
           My Skills
         </h3>
       </div>
-        <Marquee>
+
+      <div className="text-center flex justify-center items-center gap-5 flex-wrap">
+        {
+            categories.map((item) => <button key={item.id} className="text-white bg-[#417e383a] px-5 py-1 border-2 border-[#417e384d] rounded-lg">{item.category}</button>)
+        }
+      </div>
+      <Marquee>
           <div className='flex flex-wrap justify-center items-center gap-12'>
             <div>
                 <img className='w-[100px] h-[100px] bg-white' src={html} alt="" />
@@ -58,7 +71,7 @@ const SkillsPage = () => {
             </div>
           </div>
           </Marquee>
-      </div>
+    </div>
   );
 };
 
