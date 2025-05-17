@@ -7,24 +7,6 @@
   --bgcolor1: #222a;
 }
 
-/* body {
-  display: grid;
-  place-content: center;
-  block-size: 100vh;
-} */
-
-/* body::before {
-  content: '';
-  display: block;
-  inline-size: 100vw;
-  block-size: 100vh;
-  position: fixed;
-  background: linear-gradient(-45deg, var(--bgcolor0) 60%, var(--bgcolor1) 0), 
-              linear-gradient(to top left, var(--bgcolor0) 50%, var(--bgcolor1) 0), 
-              linear-gradient(to bottom left, var(--bgcolor0) 50%, var(--bgcolor1) 0), 
-              linear-gradient(135deg, var(--bgcolor0) 20%, var(--bgcolor1) 0);
-} */
-
 .com {
   block-size: 40vmin;
   inline-size: 40vmin;
