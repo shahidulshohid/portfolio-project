@@ -37,7 +37,7 @@ const skillsData = [
     category: "Programming Languages",
     icon: <FaCodeBranch />,
     color: "from-blue-500 to-cyan-400",
-    description: "Core languages I use for development",
+    description: "These are the core languages I use regularly in my development work.",
     items: [
       { name: "JavaScript", icon: <FaJs />, level: 90 },
       { name: "TypeScript", icon: <SiTypescript />, level: 82 },
@@ -47,7 +47,7 @@ const skillsData = [
     category: "Libraries & Frameworks",
     icon: <FaServer />,
     color: "from-purple-500 to-pink-500",
-    description: "Tools that accelerate my development workflow",
+    description: "Essential tools that boost my productivity and enhance my workflow.",
     items: [
       { name: "React", icon: <FaReact />, level: 92 },
       { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
@@ -67,7 +67,7 @@ const skillsData = [
     category: "Database",
     icon: <FaDatabase />,
     color: "from-green-500 to-emerald-400",
-    description: "Solutions I use for data storage and management",
+    description: "These are the databases I use to store and manage data in my projects.",
     items: [
       { name: "MongoDB", icon: <SiMongodb />, level: 90 },
       { name: "MySQL", icon: <SiMysql />, level: 85 },
@@ -77,7 +77,7 @@ const skillsData = [
     category: "Tools & Platforms",
     icon: <FaTools />,
     color: "from-yellow-400 to-orange-500",
-    description: "Essential tools that support my development process",
+    description: "These tools help me make development smoother and more efficient every day.",
     items: [
       { name: "GitHub", icon: <FaGithub />, level: 90 },
       { name: "GIT", icon: <FaGitAlt />, level: 88 },
@@ -118,23 +118,6 @@ const SkillsPage = () => {
   return (
     <div className="px-6 py-20 bg-transparent" id="skills">
       <div className="pt-20 -mb-16">
-        {/* <motion.div
-          className="text-center mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="relative inline-block mb-3 text-5xl font-bold">
-            <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              My Skills
-            </span>
-            <span className="absolute bottom-1 left-0 w-full h-3 bg-accent/10 rounded-lg -z-10"></span>
-          </h2>
-          <p className="max-w-2xl mx-auto text-xl text-text-secondary">
-            Here's a showcase of my technical skills and proficiencies
-          </p>
-        </motion.div> */}
         <div className="text-white font-bold text-3xl border-t pt-16 mb-16">
           <motion.div
             className="text-center mb-14"
@@ -150,7 +133,8 @@ const SkillsPage = () => {
               <span className="absolute bottom-1 left-0 w-full h-3 bg-accent/10 rounded-lg -z-10"></span>
             </h2>
             <p className="max-w-2xl mx-auto text-lg text-text-secondary">
-              Here's a showcase of my technical skills and proficiencies
+              Here, I have showcased my technical skills and proficiencies to
+              highlight the tools and technologies I work with.
             </p>
           </motion.div>
         </div>
@@ -293,10 +277,10 @@ const SkillsPage = () => {
         >
           <div className="max-w-3xl p-6 text-center rounded-xl bg-[#417e381a] border border-accent/20">
             <h3 className="mb-3 text-2xl font-bold text-white">
-              Looking to collaborate on a project?
+              Interested in collaborating on a project?
             </h3>
             <p className="mb-5 text-white">
-              I'm always open to discussing new projects and opportunities.
+              I’m open to discussing exciting new projects and opportunities anytime.
             </p>
             <a
               href="#contact"
