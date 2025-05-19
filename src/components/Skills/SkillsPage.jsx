@@ -31,13 +31,15 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import "./Skills.css";
 
 const skillsData = [
   {
     category: "Programming Languages",
     icon: <FaCodeBranch />,
     color: "from-blue-500 to-cyan-400",
-    description: "These are the core languages I use regularly in my development work.",
+    description:
+      "These are the core languages I use regularly in my development work.",
     items: [
       { name: "JavaScript", icon: <FaJs />, level: 90 },
       { name: "TypeScript", icon: <SiTypescript />, level: 82 },
@@ -47,7 +49,8 @@ const skillsData = [
     category: "Libraries & Frameworks",
     icon: <FaServer />,
     color: "from-purple-500 to-pink-500",
-    description: "Essential tools that boost my productivity and enhance my workflow.",
+    description:
+      "Essential tools that boost my productivity and enhance my workflow.",
     items: [
       { name: "React", icon: <FaReact />, level: 92 },
       { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
@@ -67,7 +70,8 @@ const skillsData = [
     category: "Database",
     icon: <FaDatabase />,
     color: "from-green-500 to-emerald-400",
-    description: "These are the databases I use to store and manage data in my projects.",
+    description:
+      "These are the databases I use to store and manage data in my projects.",
     items: [
       { name: "MongoDB", icon: <SiMongodb />, level: 90 },
       { name: "MySQL", icon: <SiMysql />, level: 85 },
@@ -77,7 +81,8 @@ const skillsData = [
     category: "Tools & Platforms",
     icon: <FaTools />,
     color: "from-yellow-400 to-orange-500",
-    description: "These tools help me make development smoother and more efficient every day.",
+    description:
+      "These tools help me make development smoother and more efficient every day.",
     items: [
       { name: "GitHub", icon: <FaGithub />, level: 90 },
       { name: "GIT", icon: <FaGitAlt />, level: 88 },
@@ -275,34 +280,40 @@ const SkillsPage = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-3xl p-6 text-center rounded-xl bg-[#417e381a] border border-accent/20">
-            <h3 className="mb-3 text-2xl font-bold text-white">
-              Interested in collaborating on a project?
-            </h3>
-            <p className="mb-5 text-white">
-              I’m open to discussing exciting new projects and opportunities anytime.
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center px-4 py-2 text-lg font-bold transition-all border rounded-lg text-[#9CC842] bg-[#417e381a] hover:text-white"
-            >
-              Get in touch
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 ml-2 -mr-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </a>
-          </div>
+          <article className="overflow-hidden p-px relative rounded-md border border-accent/20">
+            <div className="glow inset-0 w-[100px] h-[100px] absolute rotate-45"></div>
+            <section className="inline-block space-y-2 bg-black rounded-md z-10 relative px-5 py-2">
+              <div className="text-center mb-2">
+                <h3 className="mb-3 text-2xl font-bold text-white">
+                  Interested in collaborating on a project?
+                </h3>
+                <p className="mb-5 text-white">
+                  I’m open to discussing exciting new projects and opportunities
+                  anytime.
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-4 py-2 text-lg font-bold transition-all border rounded-lg text-[#9CC842] bg-[#417e381a] hover:text-white"
+                >
+                  Get in touch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </section>
+          </article>
         </div>
       </div>
     </div>
