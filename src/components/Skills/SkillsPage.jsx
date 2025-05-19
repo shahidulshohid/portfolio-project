@@ -1,78 +1,210 @@
-import html from "../../assets/logo/html.png";
-import css from "../../assets/logo/css.png";
-import javascript from "../../assets/logo/javascript.png";
-import mongodb from "../../assets/logo/mongodb.png";
-import express from "../../assets/logo/express.jpg";
-import react from "../../assets/logo/react.png";
-import tailwind from "../../assets/logo/tailwind.png";
-import node from "../../assets/logo/nodejs.jpg";
-import firebase from "../../assets/logo/firebase.jpg";
-import Marquee from "react-fast-marquee";
-import { useEffect, useState } from "react";
+
+import { motion } from "framer-motion";
+import { FaJs, FaPython, FaCuttlefish, FaReact, FaNodeJs, FaDatabase, FaServer, FaGitAlt, FaGithub, FaCodeBranch, FaFire, FaBootstrap, FaFigma, FaTools, FaNetworkWired } from "react-icons/fa";
+import { SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiNetlify, SiPycharm, SiIntellijidea, SiMaterialdesign, SiNextdotjs, SiTypescript } from "react-icons/si";
+import { useState } from "react";
+
+const skills = [
+    {
+        category: "Programming Languages",
+        icon: <FaCodeBranch />,
+        color: "from-blue-500 to-cyan-400",
+        description: "Core languages I use for development",
+        items: [
+            { name: "JavaScript", icon: <FaJs />, level: 90 },
+            { name: "TypeScript", icon: <SiTypescript />, level: 82 },
+        ],
+    },
+    {
+        category: "Libraries & Frameworks",
+        icon: <FaServer />,
+        color: "from-purple-500 to-pink-500",
+        description: "Tools that accelerate my development workflow",
+        items: [
+            { name: "React", icon: <FaReact />, level: 92 },
+            { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
+            { name: "Node.js", icon: <FaNodeJs />, level: 85 },
+            { name: "Express.js", icon: <SiExpress />, level: 80 },
+            { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90 },
+            { name: "DaisyUI", icon: <SiMaterialdesign />, level: 85 },
+            { name: "Material Tailwind", icon: <SiMaterialdesign />, level: 80 },
+            { name: "Framer Motion", icon: <FaNetworkWired />, level: 75 },
+            { name: "Bootstrap 5", icon: <FaBootstrap />, level: 85 }
+        ],
+    },
+    {
+        category: "Database",
+        icon: <FaDatabase />,
+        color: "from-green-500 to-emerald-400",
+        description: "Solutions I use for data storage and management",
+        items: [
+            { name: "MySQL", icon: <SiMysql />, level: 85 },
+            { name: "MongoDB", icon: <SiMongodb />, level: 90 }
+        ],
+    },
+    {
+        category: "Tools & Platforms",
+        icon: <FaTools />,
+        color: "from-yellow-400 to-orange-500",
+        description: "Essential tools that support my development process",
+        items: [
+            { name: "GitHub", icon: <FaGithub />, level: 90 },
+            { name: "GIT", icon: <FaGitAlt />, level: 88 },
+            { name: "VSCode", icon: <FaCodeBranch />, level: 95 },
+            { name: "Postman", icon: <SiPostman />, level: 85 },
+            { name: "Figma", icon: <FaFigma />, level: 80 },
+            { name: "Netlify", icon: <SiNetlify />, level: 85 },
+            { name: "Firebase", icon: <FaFire />, level: 88 }
+        ],
+    },
+];
+
+const SkillBar = ({ level, name }) => {
+    return (
+        <div className="w-full mb-1">
+            <div className="flex justify-between mb-1">
+                <span className="text-xs font-medium text-accent">{name}</span>
+                <span className="text-xs font-medium text-accent">{level}%</span>
+            </div>
+            <div className="w-full h-2 rounded-full shadow-inner">
+                <motion.div 
+                    className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${level}%` }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                />
+            </div>
+        </div>
+    );
+};
 
 const SkillsPage = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    fetch("/categories.json")
-      .then((res) => res.json())
-      .then((data) => setCategories(data));
-  }, []);
+    const [activeTab, setActiveTab] = useState(0);
+    const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  return (
-    <div className="pt-24" id="skills">
-      <div>
-        <h3 className="text-white font-bold text-3xl border-t pt-16 mb-16 mt-10">
-          My Skills
-        </h3>
-      </div>
-
-      <div className="text-center flex justify-center items-center gap-5 flex-wrap">
-        {
-            categories.map((item) => <button key={item.id} className="text-white bg-[#417e383a] px-5 py-1 border-2 border-[#417e384d] rounded-lg">{item.category}</button>)
-        }
-      </div>
-      <Marquee>
-          <div className='flex flex-wrap justify-center items-center gap-12'>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={html} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">HTML</h3>
+    return (
+        <div className="px-6 py-20 bg-transparent" id="skills">
+            <div className="max-w-6xl mx-auto">
+                <motion.div
+                    className="text-center mb-14"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                >
+                    <h2 className="relative inline-block mb-3 text-5xl font-bold">
+                        <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">My Skills</span>
+                        <span className="absolute bottom-1 left-0 w-full h-3 bg-accent/10 rounded-lg -z-10"></span>
+                    </h2>
+                    <p className="max-w-2xl mx-auto text-xl text-text-secondary">
+                        Here's a showcase of my technical skills and proficiencies
+                    </p>
+                </motion.div>
+                
+                {/* Skills Category Tabs */}
+                <div className="flex flex-wrap justify-center mb-10 gap-3">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className={`flex items-center gap-2 px-5 py-2 rounded-xl text-white border font-medium transition-all duration-300 ${
+                                activeTab === index 
+                                ? `bg-gradient-to-r ${skill.color} text-white shadow-lg border-none` 
+                                : `text-text-secondary hover:bg-gradient-to-r ${skill.color} hover:border-none`
+                            }`}
+                            onClick={() => setActiveTab(index)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <span className={activeTab === index ? "text-xl" : "text-accent text-xl"}>{skill.icon}</span>
+                            {skill.category}
+                        </div>
+                    ))}
+                </div>
+                
+                {/* Active Category Description */}
+                <motion.p 
+                    className={`max-w-2xl mx-auto mb-10 text-center text-lg text-white`}
+                    key={activeTab}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {skills[activeTab].description}
+                </motion.p>
+                
+                {/* Skill Grid */}
+                <motion.div 
+                    className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+                    key={`grid-${activeTab}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {skills[activeTab].items.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            className="p-5 overflow-hidden transition-all duration-300 bg-bg-secondary/50 backdrop-blur-sm border border-accent/10 rounded-xl hover:shadow-xl hover:shadow-accent/10"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.05 }}
+                            viewport={{ once: true }}
+                            whileHover={{ 
+                                y: -5,
+                                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                                borderColor: "rgba(var(--color-accent-rgb), 0.3)"
+                            }}
+                            onHoverStart={() => setHoveredSkill(index)}
+                            onHoverEnd={() => setHoveredSkill(null)}
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className={`flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br ${skills[activeTab].color} p-2.5 text-text-primary`}>
+                                    <motion.div
+                                        animate={hoveredSkill === index ? { rotate: 360 } : {}}
+                                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                                        className="text-2xl"
+                                    >
+                                        {item.icon}
+                                    </motion.div>
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold text-text-primary">{item.name}</h3>
+                                </div>
+                            </div>
+                            <SkillBar level={item.level} name="Proficiency" />
+                        </motion.div>
+                    ))}
+                </motion.div>
+                
+                {/* Call to Action */}
+                <motion.div 
+                    className="flex justify-center mt-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
+                    <div className="max-w-3xl p-6 text-center rounded-xl bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-accent/20">
+                        <h3 className="mb-3 text-2xl font-bold text-accent">Looking to collaborate on a project?</h3>
+                        <p className="mb-5 text-text-secondary">I'm always open to discussing new projects and opportunities.</p>
+                        <a 
+                            href="#contact" 
+                            className="inline-flex items-center px-6 py-3 text-sm font-medium transition-all bg-accent rounded-lg hover:bg-accent/80 text-text-primary"
+                        >
+                            Get in touch
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-2 -mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </motion.div>
             </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={css} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">CSS</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={javascript} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">JAVASCRIPT</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={mongodb} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">MONGODB</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={express} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">EXPRESS</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={react} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">REACT</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={tailwind} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">TAILWIND</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={node} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">NODE</h3>
-            </div>
-            <div>
-                <img className='w-[100px] h-[100px] bg-white' src={firebase} alt="" />
-                <h3 className="text-center mt-1 text-white font-bold">FIREBASE</h3>
-            </div>
-          </div>
-          </Marquee>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default SkillsPage;
