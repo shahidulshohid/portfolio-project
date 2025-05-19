@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.skill:hover {
-    background-color: green;
-}

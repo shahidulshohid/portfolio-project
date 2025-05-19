@@ -1,10 +1,11 @@
 
+
+import { FaJs,FaReact, FaNodeJs, FaDatabase, FaServer, FaGitAlt, FaGithub, FaCodeBranch, FaFire, FaBootstrap, FaFigma, FaTools, FaNetworkWired } from "react-icons/fa";
+import { SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiNetlify, SiMaterialdesign, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { motion } from "framer-motion";
-import { FaJs, FaPython, FaCuttlefish, FaReact, FaNodeJs, FaDatabase, FaServer, FaGitAlt, FaGithub, FaCodeBranch, FaFire, FaBootstrap, FaFigma, FaTools, FaNetworkWired } from "react-icons/fa";
-import { SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiNetlify, SiPycharm, SiIntellijidea, SiMaterialdesign, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { useState } from "react";
 
-const skills = [
+const skillsData = [
     {
         category: "Programming Languages",
         icon: <FaCodeBranch />,
@@ -104,7 +105,7 @@ const SkillsPage = () => {
                 
                 {/* Skills Category Tabs */}
                 <div className="flex flex-wrap justify-center mb-10 gap-3">
-                    {skills.map((skill, index) => (
+                    {skillsData.map((skill, index) => (
                         <div
                             key={index}
                             className={`flex items-center gap-2 px-5 py-2 rounded-xl text-white border font-medium transition-all duration-300 ${
@@ -134,10 +135,9 @@ const SkillsPage = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    {skills[activeTab].description}
+                    {skillsData[activeTab].description}
                 </motion.p>
                 
-                {/* Skill Grid */}
                 <motion.div 
                     className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
                     key={`grid-${activeTab}`}
@@ -145,7 +145,7 @@ const SkillsPage = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    {skills[activeTab].items.map((item, index) => (
+                    {skillsData[activeTab].items.map((item, index) => (
                         <motion.div
                             key={index}
                             className="p-5 overflow-hidden transition-all duration-300 bg-bg-secondary/50 backdrop-blur-sm border border-accent/10 rounded-xl hover:shadow-xl hover:shadow-accent/10"
@@ -162,7 +162,7 @@ const SkillsPage = () => {
                             onHoverEnd={() => setHoveredSkill(null)}
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className={`flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br ${skills[activeTab].color} p-2.5 text-text-primary`}>
+                                <div className={`flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br ${skillsData[activeTab].color} p-2.5 text-text-primary`}>
                                     <motion.div
                                         animate={hoveredSkill === index ? { rotate: 360 } : {}}
                                         transition={{ duration: 0.5, ease: "easeInOut" }}
