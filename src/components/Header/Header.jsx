@@ -44,7 +44,7 @@ const Header = () => {
             />
           </span>
         </h3>
-        <div className="max-w-2xl text-white text-lg">
+        <div className="max-w-2xl text-white text-lg text-justify">
           <p>A web developer is someone who turns ideas into real, interactive websites and applications. They design and build the online experiences we use every day. I have created several unique websites using modern technologies, always focusing on making them work well and easy to use.</p>
         </div>
         <div className="bg-[#417e381a] border-2 border-[#417e384d] hover:bg-[#417e383a] hover:border-[#417e384d] rounded-lg max-w-lg">
