@@ -98,7 +98,7 @@ function ContactPage() {
               ></textarea>
             </div>
             <button
-              className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black"
+              className="btn border bg-transparent text-lg text-white mt-3 hover:text-black"
               type="submit"
             >
               Submit Form

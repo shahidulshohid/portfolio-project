@@ -37,11 +37,11 @@ const MyPortfolio = () => {
         ))}
       </div></p>
           <div className="flex justify-between">
-          <Link to={`details/${portfolio.id}`}><button className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black">
+          <Link to={`details/${portfolio.id}`}><button className="btn border bg-transparent text-lg text-white mt-3 hover:text-black">
             Details
           </button>
           </Link>
-          <NavLink to={portfolio.liveLink} target="_blank"><button className="btn bg-blue-600 border-none text-lg text-white mt-3 hover:text-black">Live Link</button></NavLink>
+          <NavLink to={portfolio.liveLink} target="_blank"><button className="btn border bg-transparent text-lg text-white mt-3 hover:text-black">Live Link</button></NavLink>
           </div>
         </div>
       ))}
