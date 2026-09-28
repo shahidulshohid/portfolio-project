@@ -3,12 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { HelmetProvider } from "react-helmet-async";
+import { ThemeProvider } from './context/ThemeContext.jsx';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
 import DetailsPage from './components/DetailsPage/DetailsPage.jsx';
 import HomePage from './components/HomePage/HomePage.jsx';
 
@@ -31,8 +31,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <HelmetProvider>
-    <RouterProvider router={router} />
-    </HelmetProvider>
+    <ThemeProvider>
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
+    </ThemeProvider>
   </StrictMode>,
 )
+

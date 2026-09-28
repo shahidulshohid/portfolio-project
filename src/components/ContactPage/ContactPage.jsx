@@ -2,112 +2,176 @@ import React from "react";
 import Swal from "sweetalert2";
 import { IoMdMailOpen } from "react-icons/io";
 import { PiPhoneCallFill } from "react-icons/pi";
+import { FiSend } from "react-icons/fi";
+
 function ContactPage() {
   const onSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const form = event.target;
+    const formData = new FormData(form);
 
     formData.append("access_key", "88f9a790-8572-4074-aec2-b48c5e4ba0a7");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((r) => r.json());
 
-    if (res.success) {
+      if (res.success) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Email sent successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        form.reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong. Please try again!",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
       Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Email sent successfully",
-        showConfirmButton: false,
-        timer: 1500,
+        icon: "error",
+        title: "Error",
+        text: "Could not send message at this time.",
       });
     }
   };
 
   return (
-   <div className="mt-28 mb-24"  id="contact">
-     <div className="border px-6 p-6 rounded-xl">
-      <h3 className="text-3xl  text-white font-bold text-center">
-        GET IN TOUCH
-      </h3>
-      <div className="md:flex justify-between space-y-5 md:space-y-0 md:gap-5 lg:gap-12">
-        <div className="flex-1">
-          <h3 className="text-4xl font-bold mb-2 text-white">Dont't hesitate to contact me</h3>
-          <p className="font-semibold text-lg mb-2 text-white">
-            Feel free to get in touch with me. I am always open to discussing
-            new projects, creative ideas or opportunities to be part of your
-            visions.
+    <div className="mt-28 mb-24" id="contact">
+      <div className="border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-zinc-900/30 backdrop-blur-sm p-6 sm:p-10 rounded-2xl shadow-sm dark:shadow-none transition-colors duration-300">
+        <div className="text-center mb-10">
+          <h2 className="mb-3 text-4xl md:text-5xl font-bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600 dark:from-green-400 dark:to-green-700">
+              Get In Touch
+            </span>
+          </h2>
+          <p className="max-w-xl mx-auto text-base sm:text-lg text-gray-600 dark:text-gray-400">
+            Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
-          <div className="flex gap-3 items-center">
-            <div><IoMdMailOpen className="size-12 text-white"/></div>
-            <div>
-              <h4 className="text-xl font-semibold text-white">Mail me</h4>
-              <p className="text-sm font-semibold text-white">shahidulislamshohi7@gmail.com</p>
-            </div>
-          </div>
-          <div className="flex gap-3 items-center mt-3">
-            <div><PiPhoneCallFill className="size-12 text-white" /></div>
-            <div>
-              <h4 className="text-xl font-semibold text-white">Call me</h4>
-              <p className="text-sm font-semibold text-white">+8801738283277(WhatsApp)</p>
-            </div>
-          </div>
         </div>
-        <div className="flex-1">
-          <form onSubmit={onSubmit}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="input input-bordered"
-                required
-              />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-6">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Don't hesitate to reach out
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+              Feel free to get in touch with me. I am always open to discussing
+              new projects, creative ideas or opportunities to be part of your
+              visions.
+            </p>
+
+            <div className="space-y-4 pt-2">
+              <div className="flex gap-4 items-center p-4 rounded-xl bg-gray-50 dark:bg-zinc-900/60 border border-gray-200 dark:border-zinc-800 transition-all">
+                <div className="p-3 rounded-xl bg-emerald-500/10 text-[#417E38] dark:text-[#9CC842]">
+                  <IoMdMailOpen className="w-7 h-7" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                    Mail me
+                  </h4>
+                  <a
+                    href="mailto:shahidulislamshohi7@gmail.com"
+                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-[#417E38] dark:hover:text-[#9CC842] transition-colors break-all"
+                  >
+                    shahidulislamshohi7@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-center p-4 rounded-xl bg-gray-50 dark:bg-zinc-900/60 border border-gray-200 dark:border-zinc-800 transition-all">
+                <div className="p-3 rounded-xl bg-emerald-500/10 text-[#417E38] dark:text-[#9CC842]">
+                  <PiPhoneCallFill className="w-7 h-7" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                    Call me
+                  </h4>
+                  <a
+                    href="tel:+8801738283277"
+                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-[#417E38] dark:hover:text-[#9CC842] transition-colors"
+                  >
+                    +8801738283277 (WhatsApp)
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Message</span>
-              </label>
-              <textarea
-                name="message"
-                className="textarea textarea-bordered"
-                id=""
-              ></textarea>
-            </div>
-            <button
-              className="btn border bg-transparent text-lg text-white mt-3 hover:text-black"
-              type="submit"
-            >
-              Submit Form
-            </button>
-          </form>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900/80 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-sm">
+            <form onSubmit={onSubmit} className="space-y-4">
+              <div className="form-control">
+                <label className="label pb-1.5">
+                  <span className="label-text font-semibold text-gray-700 dark:text-gray-300">
+                    Your Name
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  className="input input-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
+                  required
+                />
+              </div>
+
+              <div className="form-control">
+                <label className="label pb-1.5">
+                  <span className="label-text font-semibold text-gray-700 dark:text-gray-300">
+                    Email Address
+                  </span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="john@example.com"
+                  className="input input-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
+                  required
+                />
+              </div>
+
+              <div className="form-control">
+                <label className="label pb-1.5">
+                  <span className="label-text font-semibold text-gray-700 dark:text-gray-300">
+                    Message
+                  </span>
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="How can I help you?"
+                  className="textarea textarea-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#417E38] hover:bg-[#34682c] text-white font-bold text-base transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg"
+              >
+                <FiSend className="w-4 h-4" />
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-   </div>
   );
 }
 
