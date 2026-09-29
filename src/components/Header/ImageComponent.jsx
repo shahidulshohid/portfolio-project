@@ -1,4 +1,4 @@
-import headerImg from "../../assets/headerImg.jpg";
+import headerImg from "../../assets/headerImg.jpeg";
 import './ImageComponent.css'; 
 
 const ImageComponent = () => {

@@ -1,5 +1,5 @@
 import { Fade } from "react-awesome-reveal";
-import headerImg from "../../assets/headerImg.jpg";
+import headerImg from "../../assets/headerImg.jpeg";
 
 const AboutPage = () => {
   return (
@@ -18,7 +18,7 @@ const AboutPage = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
               <img
                 src={headerImg}
-                className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] object-cover rounded-2xl shadow-xl"
+                className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] object-cover object-top rounded-2xl shadow-xl"
                 alt="Shahidul Islam Profile"
               />
             </div>
