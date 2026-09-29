@@ -1,5 +1,6 @@
 import { Fade } from "react-awesome-reveal";
-import headerImg from "../../assets/headerImg.jpeg";
+// import headerImg from "../../assets/headerImg.jpeg";
+import headerImg from "../../assets/aboutImg.jpg";
 
 const AboutPage = () => {
   return (

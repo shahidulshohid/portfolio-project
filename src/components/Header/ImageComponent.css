@@ -1,97 +1,25 @@
-:root {
-  --inset: 1vmin;
-  --color0: #417E38;
-  --color1: #222;
-  --duration: 5s;
-  --bgcolor0: #417E38;
-  --bgcolor1: #222a;
-}
-
-.com {
-  block-size: 40vmin;
-  inline-size: 40vmin;
-  display: grid;
-  place-items: center;
-  rotate: 45deg;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px black, 0 0 10px black;
-  filter: drop-shadow(0 0 10px var(--color0)) saturate(2);
-}
-
-.com .th {
-  inline-size: 100%;
-  block-size: 100%;
-  overflow: hidden;
-  -webkit-clip-path: inset(var(--inset));
-  clip-path: inset(var(--inset));
-}
-
-.com .th img {
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  rotate: -45deg;
-  scale: 1.6;
-}
-
-.com::before {
-  content: '';
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  position: absolute;
-  background: repeating-conic-gradient(transparent, var(--color0) 25deg, var(--color1) 22.5deg, transparent 90deg);
-  -webkit-animation: var(--duration) f linear infinite;
-  animation: var(--duration) f linear infinite;
-  scale: 1.6;
-}
-
-@-webkit-keyframes f {
+@keyframes spinBorder {
   0% {
-    rotate: 0;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 1turn;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes f {
-  0% {
-    rotate: 0;
+.animate-border-spin {
+  animation: spinBorder 4.5s linear infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  100% {
-    rotate: 1turn;
+  50% {
+    transform: translateY(-8px);
   }
 }
 
-@supports not (rotate: 0deg) {
-  .com {
-    transform: rotate(45deg);
-  }
-  .com .th img {
-    transform: rotate(-45deg) scale(1.6);
-  }
-  .com::before {
-    transform: scale(1.6);
-    -webkit-animation-name: g;
-    animation-name: g;
-  }
-  @-webkit-keyframes g {
-    0% {
-      transform: rotate(0) scale(1.6);
-    }
-    100% {
-      transform: rotate(1turn) scale(1.6);
-    }
-  }
-  @keyframes g {
-    0% {
-      transform: rotate(0) scale(1.6);
-    }
-    100% {
-      transform: rotate(1turn) scale(1.6);
-    }
-  }
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
 }
