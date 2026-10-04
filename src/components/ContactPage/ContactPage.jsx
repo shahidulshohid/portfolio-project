@@ -124,7 +124,7 @@ function ContactPage() {
                 <input
                   type="text"
                   name="name"
-                  placeholder="John Doe"
+                  placeholder="Enter your name"
                   className="input input-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
                   required
                 />
@@ -139,7 +139,7 @@ function ContactPage() {
                 <input
                   type="email"
                   name="email"
-                  placeholder="john@example.com"
+                  placeholder="Enter your email"
                   className="input input-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
                   required
                 />
@@ -154,7 +154,7 @@ function ContactPage() {
                 <textarea
                   name="message"
                   rows={4}
-                  placeholder="How can I help you?"
+                  placeholder="Write your message"
                   className="textarea textarea-bordered w-full bg-gray-50 dark:bg-zinc-800/80 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white focus:outline-none focus:border-[#417E38]"
                   required
                 ></textarea>
