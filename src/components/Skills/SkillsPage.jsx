@@ -33,6 +33,46 @@ import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import "./Skills.css";
 
+// Official Supabase Brand Icon
+const SupabaseIcon = (props) => (
+  <svg
+    stroke="currentColor"
+    fill="none"
+    strokeWidth="0"
+    viewBox="0 0 256 263"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M149.602 258.579C142.884 267.038 129.264 262.403 129.102 251.602L126.735 93.6177H232.964C252.204 93.6177 262.935 115.841 250.971 130.91L149.602 258.579Z"
+      fill="currentColor"
+      fillOpacity="0.75"
+    />
+    <path
+      d="M106.399 4.36909C113.116 -4.09118 126.737 0.544432 126.899 11.346L127.936 169.33H23.037C3.79559 169.33 -6.93568 147.107 5.02918 132.038L106.399 4.36909Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+// Official Neon Database Brand Icon
+const NeonIcon = (props) => (
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth="0"
+    viewBox="0 0 44 44"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M43.9855 0.0123174V44L26.9857 29.2514V44H0.417969V0L43.9855 0.0123174ZM5.75846 38.6595H21.6452V17.5326L38.6453 32.5729V5.35124L5.75846 5.34181V38.6595Z" />
+  </svg>
+);
+
 const skillsData = [
   {
     category: "Programming Languages",
@@ -75,6 +115,8 @@ const skillsData = [
     items: [
       { name: "MongoDB", icon: <SiMongodb />, level: 90 },
       { name: "MySQL", icon: <SiMysql />, level: 85 },
+      { name: "Supabase", icon: <SupabaseIcon />, level: 85 },
+      { name: "Neon DB", icon: <NeonIcon />, level: 80 },
     ],
   },
   {
@@ -88,6 +130,7 @@ const skillsData = [
       { name: "GIT", icon: <FaGitAlt />, level: 88 },
       { name: "VSCode", icon: <FaCodeBranch />, level: 95 },
       { name: "Postman", icon: <SiPostman />, level: 85 },
+      { name: "VPS", icon: <FaServer />, level: 85 },
       { name: "Figma", icon: <FaFigma />, level: 80 },
       { name: "Netlify", icon: <SiNetlify />, level: 85 },
       { name: "Vercel", icon: <SiVercel />, level: 85 },
