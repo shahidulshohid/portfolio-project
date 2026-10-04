@@ -15,13 +15,28 @@ const AboutPage = () => {
       <div className="lg:flex justify-between items-center gap-16">
         <div className="flex justify-center items-center">
           <Fade direction="up">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
-              <img
-                src={headerImg}
-                className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] object-cover object-top rounded-2xl shadow-xl"
-                alt="Shahidul Islam Profile"
-              />
+            <div className="relative group animate-float-slow select-none">
+              {/* Ambient Gradient Glow */}
+              <div className="absolute -inset-3 bg-gradient-to-tr from-emerald-500/30 via-green-500/20 to-teal-400/20 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+              {/* Rotating Glowing Border Frame */}
+              <div className="relative p-[3px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:-translate-y-1">
+                {/* Animated Rotating Conic Gradient Beam */}
+                <div className="absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0_50deg,#417E38_100deg,#34d399_170deg,transparent_220deg_270deg,#417E38_310deg,#10b981_360deg)] animate-border-spin pointer-events-none"></div>
+
+                {/* Inner Card */}
+                <div className="relative bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl rounded-[22px] p-2.5 sm:p-3">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src={headerImg}
+                      alt="Shahidul Islam Profile"
+                      className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] object-cover object-top rounded-2xl transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    {/* Subtle bottom gradient overlay for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent rounded-2xl pointer-events-none"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Fade>
         </div>
