@@ -28,6 +28,7 @@ import {
   SiJsonwebtokens,
   SiAxios,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -93,6 +94,7 @@ const skillsData = [
       "Essential tools that boost my productivity and enhance my workflow.",
     items: [
       { name: "React", icon: <FaReact />, level: 92 },
+      { name: "React Native", icon: <TbBrandReactNative />, level: 80 },
       { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
       { name: "Node.js", icon: <FaNodeJs />, level: 85 },
       { name: "Express.js", icon: <SiExpress />, level: 80 },
