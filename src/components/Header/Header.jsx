@@ -60,6 +60,7 @@ const Header = () => {
           <NavLink
             to="https://www.facebook.com/profile.php?id=100056264109156"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex justify-center items-center text-center space-x-1.5 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-zinc-700 transition-all group"
           >
             <CiFacebook className="text-lg w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-[#417E38]" />
@@ -68,8 +69,9 @@ const Header = () => {
             </span>
           </NavLink>
           <NavLink
-            to="https://www.whatsapp.com/"
+            to="https://wa.me/8801738283277"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex justify-center items-center text-center space-x-1.5 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-zinc-700 transition-all group"
           >
             <FaWhatsapp className="text-lg w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-[#417E38]" />
@@ -78,8 +80,9 @@ const Header = () => {
             </span>
           </NavLink>
           <NavLink
-            to="https://www.linkedin.com/"
+            to="https://www.linkedin.com/in/mdshahidulislam2701"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex justify-center items-center text-center space-x-1.5 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-zinc-700 transition-all group"
           >
             <CiLinkedin className="text-lg w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-[#417E38]" />
