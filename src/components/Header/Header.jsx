@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { CiFacebook } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
-import { BsCloudDownload } from "react-icons/bs";
+// import { BsCloudDownload } from "react-icons/bs";
 import ImageComponent from "./ImageComponent";
+import { BsEye } from "react-icons/bs";
+import CvModal from "./CvModal";
 
 const Header = () => {
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+
   return (
     <div className="lg:flex justify-between md:gap-5 lg:gap-24 items-center pt-32">
       <div className="text-start space-y-4 mb-5 md:mb-0 flex-1">
@@ -44,18 +49,22 @@ const Header = () => {
             A web developer is someone who turns ideas into real, interactive websites and applications. They design and build the online experiences we use every day. I have created several unique websites using modern technologies, always focusing on making them work well and easy to use.
           </p>
         </div>
-        <div className="bg-[#417e3814] dark:bg-[#417e381a] border border-[#417e384d] hover:bg-[#417e3826] dark:hover:bg-[#417e383a] rounded-xl max-w-xs transition-all duration-300">
-          <a
-            href="/files/cv-of shahidul islam.pdf"
-            className="flex justify-center items-center space-x-2 py-2.5 px-4"
-            download
+        
+        {/* View CV Button */}
+        <div className="bg-[#417e3814] dark:bg-[#417e381a] border border-[#417e384d] hover:bg-[#417e3826] dark:hover:bg-[#417e383a] rounded-xl max-w-xs transition-all duration-300 inline-block">
+          <button
+            type="button"
+            onClick={() => setIsCvModalOpen(true)}
+            className="w-full flex justify-center items-center space-x-2 py-2.5 px-5 cursor-pointer group"
+            aria-label="View CV Preview"
           >
-            <button className="text-[#2c682c] dark:text-[#9CC842] font-bold cursor-pointer">
-              Download CV
-            </button>
-            <BsCloudDownload className="text-[#2c682c] dark:text-[#9CC842]" />
-          </a>
+            <span className="text-[#2c682c] dark:text-[#9CC842] font-bold">
+              View CV
+            </span>
+            <BsEye className="text-lg text-[#2c682c] dark:text-[#9CC842] group-hover:scale-110 transition-transform" />
+          </button>
         </div>
+
         <div className="flex justify-start items-center gap-3 pt-2">
           <NavLink
             to="https://www.facebook.com/profile.php?id=100056264109156"
@@ -95,6 +104,12 @@ const Header = () => {
       <div className="flex justify-center items-center mt-16 lg:mt-0 lg:mr-10">
         <ImageComponent />
       </div>
+
+      {/* CV Modal */}
+      <CvModal
+        isOpen={isCvModalOpen}
+        onClose={() => setIsCvModalOpen(false)}
+      />
     </div>
   );
 };
