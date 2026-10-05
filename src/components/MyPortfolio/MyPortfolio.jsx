@@ -32,12 +32,23 @@ const MyPortfolio = () => {
             className="flex flex-col justify-between p-4 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm dark:shadow-none hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 group"
           >
             <div>
-              <div className="overflow-hidden rounded-xl mb-4 bg-gray-100 dark:bg-zinc-800">
+              <div className="relative overflow-hidden rounded-xl mb-4 bg-gray-100 dark:bg-zinc-800">
                 <img
                   className="h-[220px] w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                   src={item.projectImage}
                   alt={item.title}
                 />
+                {item.status && (
+                  <span
+                    className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold shadow-md backdrop-blur-md ${
+                      item.status.toLowerCase() === "running"
+                        ? "bg-amber-500/90 text-white"
+                        : "bg-emerald-600/90 text-white"
+                    }`}
+                  >
+                    {item.status}
+                  </span>
+                )}
               </div>
               <h3 className="text-2xl text-gray-900 dark:text-white font-bold mb-2">
                 {item.title}

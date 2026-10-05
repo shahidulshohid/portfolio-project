@@ -66,9 +66,22 @@ const DetailsPage = () => {
         </div>
 
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            {details.title}
-          </h1>
+          <div className="flex flex-wrap items-center gap-3 mb-3">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+              {details.title}
+            </h1>
+            {details.status && (
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-semibold shadow-sm ${
+                  details.status.toLowerCase() === "running"
+                    ? "bg-amber-500 text-white"
+                    : "bg-emerald-600 text-white"
+                }`}
+              >
+                {details.status}
+              </span>
+            )}
+          </div>
 
           <div className="mb-6">
             <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
