@@ -6,7 +6,7 @@
       "status": "Running",
       "description": "ForMyFans is an all-in-one social media and creator monetization platform where creators can share content, live stream, post Instagram-style stories, chat in real time, sell products through their own e-commerce marketplace, and create AI-generated content.",
       "technologies": ["React 19, Vite 7", "React Router", "Zustand ", "Material UI", "Socket.io", "Stripe", "Axios", "Recharts", "React-Toastify"],
-      "githubLink": "https://github.com/fmfo33936/formyfans_frontend_updated",
+      "githubLink": "https://github.com/shahidulshohid/formyfans",
       "liveLink": "http://2.24.116.89:5173/social/",
       "projectImage": "https://i.ibb.co.com/DDNZNB0C/formyfans.png"
     },
